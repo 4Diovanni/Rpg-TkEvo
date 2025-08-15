@@ -1,0 +1,191 @@
+:root{
+  --bg:#040405; --card:#0f0f10; --muted:#9aa0a6; --white:#f7f7f7;
+  --blood:#b31217; --radius:12px;
+  --bronze:#b08b4f; --silver:#c0c0c0; --gold:#f1c40f; --emerald:#2ecc71; --ruby:#c0392b;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+/* base */
+html,body{
+  height:100%;
+  margin:0;
+  background:linear-gradient(180deg,#030304,#0b0b0b);
+  color:var(--white);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* container */
+.wrap{
+  max-width:1400px;
+  margin:18px auto;
+  padding:16px;
+  box-sizing:border-box;
+}
+
+/* header */
+header{display:flex;align-items:center;gap:12px}
+header h1{margin:0;font-size:20px}
+header p{margin:0;color:var(--muted);font-size:13px}
+
+/* layout: 50/50 columns */
+.layout{
+  display:grid;
+  grid-template-columns: 1fr 1fr; /* esquerda e direita do mesmo tamanho */
+  gap:14px;
+  margin-top:14px;
+  min-height: calc(100vh - 160px); /* altura mínima para preencher a tela */
+  box-sizing:border-box;
+}
+
+/* painel responsivo: sem largura fixa, rolagem interna */
+.panel{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:12px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.03);
+  box-sizing:border-box;
+  overflow:auto;
+  max-height: calc(100vh - 160px); /* permite rolar internamente */
+}
+
+/* lista (esquerda) */
+.list{
+  max-height:100%;
+  overflow:auto;
+  padding:6px;
+}
+
+/* itens da lista */
+.item{
+  padding:10px;
+  border-radius:8px;
+  margin-bottom:8px;
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  border:1px solid rgba(255,255,255,0.02);
+  background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.05));
+  word-break:break-word; /* quebra palavras longas */
+}
+
+/* meta e preview */
+.meta{flex:1; min-width:0} /* min-width:0 para permitir truncamento flexível */
+.title{font-weight:700; word-break:break-word}
+.muted{color:var(--muted);font-size:13px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+
+/* rank badges */
+.rank{padding:6px 8px;border-radius:8px;font-weight:700; white-space:nowrap}
+.r1{background:var(--bronze);color:#111}
+.r2{background:var(--silver);color:#111}
+.r3{background:var(--gold);color:#111}
+.r4{background:var(--emerald);color:#011}
+.r5{background:var(--ruby);color:#fff}
+
+/* controle/ações */
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.btn{background:linear-gradient(180deg,var(--blood),#7a0b0b);color:white;border:none;padding:8px 10px;border-radius:8px;cursor:pointer;font-weight:700}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+
+/* split layout em formulários */
+.ksplit{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+
+/* inputs escuros (contraste uniforme) */
+label{font-size:13px;color:var(--muted);display:block;margin-bottom:6px}
+input[type="text"], textarea, select, input[type="number"]{
+  width:100%;
+  padding:8px;
+  border-radius:8px;
+  background:#111;
+  border:1px solid rgba(255,255,255,0.03);
+  color:var(--white);
+  box-sizing:border-box;
+}
+
+/* textarea com rolagem e quebra de linha */
+textarea{
+  min-height:140px;
+  resize:vertical;
+  font-size:15px;
+  color:var(--white);
+  background:#111;
+  overflow:auto;
+  white-space:pre-wrap;
+  word-wrap:break-word;
+  word-break:break-word;
+}
+
+/* pequenas classes */
+.small{font-size:13px;color:var(--muted)}
+/* adiciona logo depois de .small-muted */
+.small-muted{font-size:12px;color:var(--muted)}
+
+/* Garante que <pre class="small-muted"> quebre linhas e role quando muito grande */
+pre.small-muted{
+  white-space: pre-wrap;       /* permite quebra de linha */
+  word-break: break-word;      /* quebra palavras muito longas */
+  overflow-wrap: anywhere;     /* quebra agressiva para tokens longos */
+  max-width: 100%;             /* não excede a largura do container */
+  display: block;
+  box-sizing: border-box;
+  background: transparent;
+  padding: 8px 6px;
+  margin: 8px 0 0 0;
+  overflow: auto;              /* adiciona scroll se necessário */
+  color: var(--muted);
+  font-family: monospace;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+
+.json-preview{
+  white-space:pre-wrap;
+  background:#020202;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.03);
+  max-height:240px;
+  overflow:auto;
+  font-family:monospace;
+  font-size:12px;
+  color:#ddd;
+  word-break:break-word;
+}
+
+/* footer */
+.footer{display:flex;justify-content:space-between;align-items:center;margin-top:10px;color:var(--muted);font-size:13px}
+
+/* chips e tabs */
+.chip{display:inline-flex;align-items:center;gap:8px;padding:6px 8px;background:rgba(255,255,255,0.02);border-radius:999px;border:1px solid rgba(255,255,255,0.02);margin-right:6px;margin-bottom:6px}
+.chip button{background:transparent;border:none;color:var(--muted);cursor:pointer}
+.levels-tabs{display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.tab{padding:6px 10px;border-radius:8px;background:rgba(255,255,255,0.02);cursor:pointer;border:1px solid rgba(255,255,255,0.03)}
+.tab.active{background:linear-gradient(90deg,var(--blood),#ff6b7a);color:#fff}
+
+/* kv rows (bonuses) */
+.kv-row{display:flex;gap:8px;margin-bottom:6px;align-items:center}
+.kv-row input[type="text"]{flex:1;background:#111}
+
+/* modal */
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);z-index:999}
+.modal .box{width:min(920px,96%);background:#0b0b0b;padding:16px;border-radius:10px}
+
+/* preview card short description: quebra limpa e evita overflow */
+.preview-card{
+  background:#0b0b0b;
+  border-radius:8px;
+  padding:8px;
+  border:1px solid rgba(255,255,255,0.02);
+  color:#ddd;
+  max-height:84px;
+  overflow:auto;
+  word-break:break-word;
+}
+
+/* responsividade: em telas pequenas, coluna única */
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr}
+  .list{max-height:240px}
+  .ksplit{grid-template-columns:1fr}
+}

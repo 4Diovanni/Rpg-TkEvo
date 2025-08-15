@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Editor de Espólios — TokyoGhoul EVO (v4)</title>
+  <link rel="stylesheet" href="stylesEditorEspolios.css">
+  <script id="espolios-embed" type="application/json">  </script>
+
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Editor de Espólios — TokyoGhoul EVO (v4)</h1>
+        <p>Carrega automaticamente <code>espolios.json</code> se existir na mesma pasta. Faction select, bônus
+          estruturados e UI escura.</p>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+        <button id="btn-import" class="btn ghost">Importar</button>
+        <input type="file" id="file-input" accept=".json,.js" style="display:none" />
+        <button id="btn-export-json" class="btn ghost">Exportar JSON</button>
+        <button id="btn-export-js" class="btn">Exportar .js</button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="panel" aria-label="Lista de Espólios">
+        <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px">
+          <input id="search" type="text" placeholder="Buscar..." style="flex:1" />
+          <select id="filter-rank" style="width:76px">
+            <option value="">Rank</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div class="controls" style="margin-bottom:8px">
+          <button id="btn-new" class="btn">Novo Espólio</button>
+          <button id="btn-undo" class="btn ghost">Desfazer</button>
+        </div>
+        <div class="list" id="espList" aria-live="polite"></div>
+        <div class="hint">Clique em um espólio para editar. As alterações ficam salvas localmente — exporte para
+          persistir.</div>
+      </aside>
+
+      <section class="panel" aria-label="Editor">
+        <form id="espForm" onsubmit="return false;">
+          <div class="ksplit">
+            <div>
+              <label>Título</label>
+              <input id="field-title" required />
+            </div>
+            <div>
+              <label>id (slug)</label>
+              <input id="field-id" pattern="[a-z0-9_\\-]+"
+                title="Somente letras minúsculas, números, underscore e hífen" />
+            </div>
+          </div>
+
+          <div class="ksplit" style="margin-top:8px">
+            <div>
+              <label>Rank (1-5)</label>
+              <select id="field-rank">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div>
+              <label>Max Level</label>
+              <input id="field-maxlevel" type="number" min="1" max="5" value="1" />
+            </div>
+          </div>
+
+          <div style="margin-top:8px">
+            <label>Thresholds (clique + editar)</label>
+            <div id="thresholdsWrap" style="margin-top:6px"></div>
+            <div style="margin-top:8px;display:flex;gap:8px">
+              <input id="newThreshold" placeholder="Número (ex: 30)" type="number" style="flex:1" />
+              <button id="btn-add-threshold" class="btn ghost" type="button">Adicionar</button>
+            </div>
+            <div class="small-muted" style="margin-top:6px">Insira um threshold por nível. A ordem corresponde aos
+              níveis (Lv1, Lv2 ...). Se alterar Max Level, os thresholds serão ajustados automaticamente.</div>
+          </div>
+
+          <div style="margin-top:8px" class="ksplit">
+            <div>
+              <label>Visibility</label>
+              <select id="field-visibility">
+                <option value="title-only">title-only</option>
+                <option value="full">full</option>
+              </select>
+            </div>
+            <div>
+              <label>Requisitos (visível)</label>
+              <textarea id="field-req"
+                placeholder="Descreva requisitos com clareza (visível para jogadores quando liberado)"
+                style="min-height:84px;font-size:15px"></textarea>
+            </div>
+
+          </div>
+
+          <div style="margin-top:8px" class="ksplit">
+            <div>
+              <label>Faction Restrição</label>
+              <select id="field-faction" multiple size="4">
+                <option>CCG</option>
+                <option>Aogiri</option>
+                <option>V</option>
+                <option>Washuu</option>
+                <option>Goat</option>
+                <option>Independente</option>
+                <option>Quinx Squad</option>
+                <option>Arukas</option>
+              </select>
+            </div>
+            <div>
+              <label>Race Restrição</label>
+              <select id="field-race" multiple size="4">
+                <option>Humano</option>
+                <option>Ghoul Puro</option>
+                <option>Meio-Ghoul</option>
+                <option>Híbrido</option>
+                <option>Anjo</option>
+                <option>Demônio</option>
+                <option>Criança Abençoada</option>
+                <option>Washuu</option>
+                <option>Atribulado</option>
+                <option>Membro da V</option>
+                <option>Quinx</option>
+              </select>
+            </div>
+
+          </div>
+
+          <div style="margin-top:12px">
+            <label>Bonuses por nível — Editor visual</label>
+            <div class="levels-tabs" id="levelsTabs"></div>
+            <div id="bonusesEditor" style="margin-top:8px"></div>
+            <div style="margin-top:8px" class="small-muted">Adicione Atributos ou Perícias como bônus. Também é possível
+              adicionar Passiva (texto) ou Item. Chaves são normalizadas automaticamente.</div>
+          </div>
+
+          <div style="margin-top:8px">
+            <label>Descrição (exibição rápida)</label>
+            <textarea id="field-desc" placeholder="Descrição curta que aparece no preview à esquerda"
+              style="min-height:80px"></textarea>
+          </div>
+
+          <div style="display:flex;gap:8px;margin-top:12px;align-items:center">
+            <button id="btn-save" class="btn" type="button">Salvar</button>
+            <button id="btn-delete" class="btn ghost" type="button">Excluir</button>
+            <button id="btn-copy-json" class="btn ghost" type="button">Copiar JSON</button>
+            <button id="btn-handout" class="btn ghost" type="button">Gerar Handout</button>
+            <div style="flex:1"></div>
+            <div class="small-muted">Última edição: <span id="last-edit">-</span></div>
+          </div>
+        </form>
+
+        <div style="margin-top:12px">
+          <h3 style="margin:0 0 8px 0">Preview JSON</h3>
+          <div class="json-preview" id="jsonPreview" aria-live="polite"></div>
+        </div>
+
+      </section>
+    </div>
+
+    <div class="footer">
+      <div class="small muted">Editor local — exporte antes de sair. O arquivo <code>espolios.json</code> na pasta será
+        carregado automaticamente, se possível.</div>
+      <div style="display:flex;gap:8px">
+        <button id="btn-download-sample" class="btn ghost">Baixar Exemplo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Handout -->
+  <div class="modal" id="modalHandout">
+    <div class="box" role="dialog" aria-modal="true">
+      <h3>Handout (HTML)</h3>
+      <div id="handoutHtml"
+        style="max-height:60vh;overflow:auto;background:#050505;padding:10px;border-radius:8px;margin-top:8px"></div>
+      <div style="display:flex;gap:8px;margin-top:8px"><button id="closeHandout"
+          class="btn ghost">Fechar</button><button id="copyHandout" class="btn">Copiar HTML</button></div>
+    </div>
+  </div>
+
+  <script>
+    /* Editor v4 JS - faction select, normalized bonus keys, load espolios.json if available */
+
+    /* Predefined lists */
+    const ATTRIBUTES = ['for', 'des', 'res', 'per', 'int', 'car', 'rc'];
+    const SKILLS = ['comb-corp', 'comb-quin', 'comb-faca', 'comb-dist', 'esquiva', 'furtividade', 'sobreviv-urb', 'invest-rast', 'conh-ghouls', 'med-campo', 'manip-social', 'empatia', 'negoc-merc', 'provocar', 'cientifica', 'artesao', 'hack', 'culinaria', 'influencia'];
+
+    /* Initial sample (fallback) */
+    const initialData = {
+      "cacador_carmesim": {
+        "id": "cacador_carmesim", "title": "Caçador Carmesim", "rank": 3, "maxLevel": 3,
+        "thresholds": [30, 100, 300],
+        "bonuses": { "1": { "rc": 5 }, "2": { "rc": 10, "res": 1 }, "3": { "rc": 20, "ability_Voraz": "descrição: Voraz" } },
+        "requirements": "Como Ghoul: alimentar-se de 30 / 100 / 300 presas.", "visibility": "title-only",
+        "raceRestriction": ["Ghoul Puro"], "factionRestriction": ["Independente"], "description": "A fome que te guia."
+      }
+    };
+
+    let espData = {};
+    let editHistory = [];
+    const MAX_HISTORY = 12;
+
+    const listEl = document.getElementById('espList');
+    const preview = document.getElementById('jsonPreview');
+    const lastEdit = document.getElementById('last-edit');
+
+    /* Helpers */
+    function slugify(s) { return s.toString().toLowerCase().trim().replace(/\s+/g, '_').replace(/[^a-z0-9_\\-]/g, ''); }
+    function now() { return new Date().toLocaleString(); }
+    function pushHistory() { editHistory.unshift(JSON.parse(JSON.stringify(espData))); if (editHistory.length > MAX_HISTORY) editHistory.pop(); document.getElementById('btn-undo').disabled = false; }
+    function undo() { if (editHistory.length === 0) return alert('Nada para desfazer'); espData = editHistory.shift(); renderList(); renderPreview(); document.getElementById('btn-undo').disabled = editHistory.length === 0; alert('Desfeito'); }
+
+    /* Load espolios.json automatically (if served via HTTP from same folder) */
+    function tryLoadLocalJSON() {
+      fetch('./espolios.json').then(r => {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      }).then(obj => {
+        // map or array -> convert to map by id
+        const map = Array.isArray(obj) ? obj.reduce((acc, it) => { acc[it.id || slugify(it.title || 'esp')] = it; return acc; }, {}) : obj;
+        espData = map;
+        renderList();
+        renderPreview();
+        console.log('espolios.json carregado automaticamente.');
+      }).catch(err => {
+        // fallback to localStorage or initialData
+        const local = localStorage.getItem('espData_v4');
+        if (local) { try { espData = JSON.parse(local); renderList(); renderPreview(); return; } catch (e) { } }
+        espData = initialData;
+        renderList(); renderPreview();
+        console.log('espolios.json não encontrado ou falha; usando dados locais.');
+      });
+    }
+
+    /* Render list with preview */
+    function renderList(filter = '') {
+      listEl.innerHTML = '';
+      const keys = Object.keys(espData).sort((a, b) => (espData[a].rank - espData[b].rank) || espData[a].title.localeCompare(espData[b].title));
+      const q = (filter || '').trim().toLowerCase();
+      keys.forEach(id => {
+        const e = espData[id];
+        if (q && !((e.title || '') + (e.id || '') + (e.description || '')).toLowerCase().includes(q)) return;
+        const item = document.createElement('div'); item.className = 'item';
+        const desc = (e.description || '').length > 120 ? (e.description || '').slice(0, 116) + '...' : (e.description || '');
+        const faction = (e.factionRestriction || []).join(', ');
+        item.innerHTML = `<div style="width:56px"><div class="rank ${'r' + Math.max(1, Math.min(5, e.rank || 1))}">${e.rank}</div></div>
+      <div class="meta"><div class="title">${e.title}</div><div class="muted">${e.id} · ${faction}</div><div class="preview-card" style="margin-top:8px">${desc}</div></div>
+      <div style="display:flex;flex-direction:column;gap:6px"><div style="font-size:12px;color:var(--muted)">${(e.visibility || '')}</div><div><button class="btn ghost" data-id="${e.id}" onclick="editEspolio('${e.id}')">Editar</button></div></div>`;
+        listEl.appendChild(item);
+      });
+    }
+
+    /* Populate form */
+    function populateForm(e) {
+      document.getElementById('field-title').value = e.title || '';
+      document.getElementById('field-id').value = e.id || '';
+      document.getElementById('field-rank').value = e.rank || 1;
+      document.getElementById('field-maxlevel').value = e.maxLevel || 1;
+      ensureThresholdCount(Number(e.maxLevel || 1), e.thresholds || []);
+      document.getElementById('field-visibility').value = e.visibility || 'title-only';
+      // race select
+      const raceSel = document.getElementById('field-race');
+      Array.from(raceSel.options).forEach(opt => opt.selected = (e.raceRestriction || []).includes(opt.text));
+      // faction select
+      const facSel = document.getElementById('field-faction');
+      Array.from(facSel.options).forEach(opt => opt.selected = (e.factionRestriction || []).includes(opt.text));
+      document.getElementById('field-req').value = e.requirements || '';
+      document.getElementById('field-desc').value = e.description || '';
+      renderLevelsTabs(Number(e.maxLevel || 1));
+      currentBonuses = JSON.parse(JSON.stringify(e.bonuses || {}));
+      renderBonusesEditor(currentBonuses);
+      lastEdit.textContent = now();
+    }
+
+    /* Thresholds management (dblclick to edit) */
+    function renderThresholds(arr) {
+      const wrap = document.getElementById('thresholdsWrap'); wrap.innerHTML = '';
+      (arr || []).forEach((n, i) => {
+        const chip = document.createElement('span'); chip.className = 'chip';
+        chip.innerHTML = `Lv${i + 1}: <strong>${n}</strong> <button title="Remover" data-index="${i}">✕</button>`;
+        chip.querySelector('button').addEventListener('click', () => { removeThreshold(Number(chip.querySelector('button').dataset.index)); });
+        chip.addEventListener('dblclick', () => {
+          const newv = prompt('Editar threshold para Lv' + (i + 1), n);
+          if (newv !== null) { const cur = getCurrentFormThresholds(); cur[i] = Number(newv); setFormThresholds(cur); }
+        });
+        wrap.appendChild(chip);
+      });
+    }
+    function addThreshold(n) { if (!n || isNaN(Number(n))) return alert('Número inválido'); const cur = getCurrentFormThresholds(); cur.push(Number(n)); setFormThresholds(cur); document.getElementById('newThreshold').value = ''; }
+    function removeThreshold(idx) { const cur = getCurrentFormThresholds(); if (idx < 0 || idx >= cur.length) return; cur.splice(idx, 1); setFormThresholds(cur); }
+    function getCurrentFormThresholds() { return Array.from(document.querySelectorAll('#thresholdsWrap .chip strong')).map(el => Number(el.textContent)); }
+    function setFormThresholds(arr) { renderThresholds(arr); document.getElementById('field-maxlevel').value = Math.max(1, arr.length); renderLevelsTabs(Number(document.getElementById('field-maxlevel').value)); }
+    function ensureThresholdCount(max, existing) { const arr = []; for (let i = 0; i < max; i++) { arr.push(existing[i] !== undefined ? existing[i] : 0); } setFormThresholds(arr); }
+
+    /* Bonuses editor with structured keys */
+    let activeLevelTab = 1;
+    function renderLevelsTabs(max) {
+      const tabs = document.getElementById('levelsTabs'); tabs.innerHTML = '';
+      for (let i = 1; i <= max; i++) {
+        const t = document.createElement('div'); t.className = 'tab' + (i === activeLevelTab ? ' active' : '');
+        t.textContent = 'Lv' + i; t.dataset.lv = i; t.addEventListener('click', () => { activeLevelTab = Number(t.dataset.lv); renderBonusesEditor(currentBonuses); renderLevelsTabs(max); });
+        tabs.appendChild(t);
+      }
+    }
+    let currentBonuses = {};
+    function renderBonusesEditor(bonusesObj) {
+      currentBonuses = JSON.parse(JSON.stringify(bonusesObj || {}));
+      const editor = document.getElementById('bonusesEditor'); editor.innerHTML = '';
+      const lvl = activeLevelTab;
+      const lvlObj = currentBonuses[String(lvl)] || {};
+      // existing entries
+      Object.entries(lvlObj).forEach(([k, v]) => {
+        const row = document.createElement('div'); row.className = 'kv-row';
+        const keyLabel = document.createElement('div'); keyLabel.style.width = '140px'; keyLabel.style.color = '#ccc'; keyLabel.textContent = k;
+        const val = document.createElement('input'); val.type = 'text'; val.value = v; val.placeholder = 'valor';
+        const del = document.createElement('button'); del.className = 'btn ghost'; del.textContent = 'Excluir'; del.addEventListener('click', () => { delete currentBonuses[String(lvl)][k]; renderBonusesEditor(currentBonuses); });
+        row.appendChild(keyLabel); row.appendChild(val); row.appendChild(del);
+        editor.appendChild(row);
+        val.addEventListener('change', () => { currentBonuses[String(lvl)][k] = isNaN(Number(val.value)) ? val.value : Number(val.value); renderBonusesEditor(currentBonuses); });
+      });
+      // add new row UI
+      const addRow = document.createElement('div'); addRow.className = 'kv-row';
+      const typeSel = document.createElement('select'); typeSel.style.width = '160px';
+      [['attribute', 'Atributo'], ['skill', 'Perícia'], ['item', 'Item'], ['passive', 'Passiva/Text'], ['ability', 'Habilidade']].forEach(opt => { const o = document.createElement('option'); o.value = opt[0]; o.textContent = opt[1]; typeSel.appendChild(o); });
+      const secondField = document.createElement('select'); secondField.style.flex = '1';
+      const secondInput = document.createElement('input'); secondInput.type = 'text'; secondInput.placeholder = 'nome (opcional)';
+      function populateSecond(type) {
+        secondField.innerHTML = ''; secondInput.style.display = 'none'; secondField.style.display = 'inline-block';
+        if (type === 'attribute') { ATTRIBUTES.forEach(a => { const o = document.createElement('option'); o.value = a; o.textContent = a; secondField.appendChild(o); }); }
+        else if (type === 'skill') { SKILLS.forEach(s => { const o = document.createElement('option'); o.value = s; o.textContent = s; secondField.appendChild(o); }); }
+        else { // item/passive/ability -> free text name
+          secondField.style.display = 'none'; secondInput.style.display = 'inline-block';
+        }
+      }
+      populateSecond('attribute');
+      typeSel.addEventListener('change', () => populateSecond(typeSel.value));
+      const valueInput = document.createElement('input'); valueInput.type = 'text'; valueInput.placeholder = 'valor (número ou texto)';
+      const addBtn = document.createElement('button'); addBtn.className = 'btn'; addBtn.textContent = 'Adicionar';
+      addBtn.addEventListener('click', () => {
+        const type = typeSel.value;
+        let keyBase = '';
+        let keyName = '';
+        if (type === 'attribute') { keyBase = secondField.value; }
+        else if (type === 'skill') { keyBase = secondField.value; }
+        else {
+          // item / passive / ability
+          keyBase = type; // use type as base key
+          keyName = secondInput.value.trim();
+        }
+        const value = valueInput.value.trim();
+        if (!value) return alert('Informe um valor');
+        let finalKey = keyBase;
+        if (keyName) finalKey = `${keyBase}_${slugify(keyName)}`;
+        if (!currentBonuses[String(activeLevelTab)]) currentBonuses[String(activeLevelTab)] = {};
+        currentBonuses[String(activeLevelTab)][finalKey] = isNaN(Number(value)) ? value : Number(value);
+        valueInput.value = ''; secondInput.value = ''; renderBonusesEditor(currentBonuses);
+      });
+      addRow.appendChild(typeSel); addRow.appendChild(secondField); addRow.appendChild(secondInput); addRow.appendChild(valueInput); addRow.appendChild(addBtn);
+      editor.appendChild(addRow);
+      // show full JSON
+      const jsonBox = document.createElement('pre'); jsonBox.className = 'small-muted'; jsonBox.style.marginTop = '8px'; jsonBox.textContent = JSON.stringify(currentBonuses[String(lvl)] || {}, null, 2);
+      editor.appendChild(jsonBox);
+    }
+
+    /* collect bonuses */
+    function collectBonusesFromEditor() {
+      const max = Number(document.getElementById('field-maxlevel').value || 1);
+      const out = {};
+      for (let i = 1; i <= max; i++) { out[String(i)] = currentBonuses[String(i)] || {}; }
+      return out;
+    }
+
+    /* validations */
+    function validateForm(obj) {
+      if (!obj.id || !/^[a-z0-9_\-]+$/.test(obj.id)) return 'ID inválido (use lowercase, números, _ ou -).';
+      if (!obj.title) return 'Título obrigatório.';
+      if (!Array.isArray(obj.thresholds) || obj.thresholds.length < 1) return 'Insira pelo menos 1 threshold.';
+      const max = Number(obj.maxLevel) || 1;
+      if (obj.thresholds.length !== max) return 'Thresholds devem igualar Max Level.';
+      const bonuses = obj.bonuses || {};
+      for (let i = 1; i <= max; i++) { if (!bonuses[String(i)]) return 'Bonuses faltando para Lv' + i; }
+      return null;
+    }
+
+    /* save */
+    function saveCurrentForm() {
+      const idField = document.getElementById('field-id'); const id = idField.value.trim() || slugify(document.getElementById('field-title').value || '');
+      const raceSel = document.getElementById('field-race');
+      const raceRestrictions = Array.from(raceSel.selectedOptions).map(o => o.text);
+      const facSel = document.getElementById('field-faction');
+      const factionRestrictions = Array.from(facSel.selectedOptions).map(o => o.text);
+      const obj = {
+        id: id,
+        title: document.getElementById('field-title').value.trim() || id,
+        rank: Number(document.getElementById('field-rank').value) || 1,
+        maxLevel: Number(document.getElementById('field-maxlevel').value) || 1,
+        thresholds: getCurrentFormThresholds(),
+        bonuses: collectBonusesFromEditor(),
+        requirements: document.getElementById('field-req').value || '',
+        visibility: document.getElementById('field-visibility').value || 'title-only',
+        raceRestriction: raceRestrictions,
+        factionRestriction: factionRestrictions,
+        description: document.getElementById('field-desc').value || ''
+      };
+      const err = validateForm(obj);
+      if (err) return alert('Erro: ' + err);
+      pushHistory();
+      espData[obj.id] = obj;
+      renderList(document.getElementById('search').value);
+      renderPreview();
+      document.getElementById('field-id').disabled = true;
+      lastEdit.textContent = now();
+      localStorage.setItem('espData_v4', JSON.stringify(espData));
+      alert('Espólio salvo.');
+    }
+
+    /* delete */
+    function deleteCurrent() {
+      const id = document.getElementById('field-id').value.trim();
+      if (!id) return alert('Nenhum espólio selecionado');
+      if (!confirm('Excluir espólio "' + id + '"?')) return;
+      pushHistory();
+      delete espData[id];
+      document.getElementById('espForm').reset();
+      document.getElementById('field-id').disabled = false;
+      renderList();
+      renderPreview();
+      localStorage.setItem('espData_v4', JSON.stringify(espData));
+    }
+
+    /* edit flow */
+    function editEspolio(id) {
+      const e = espData[id]; if (!e) return alert('Espólio não encontrado');
+      populateForm(e);
+      activeLevelTab = 1;
+      renderLevelsTabs(Number(e.maxLevel || 1));
+      renderBonusesEditor(currentBonuses);
+      document.getElementById('field-id').disabled = true;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    /* preview / export */
+    function renderPreview() { preview.textContent = JSON.stringify(espData, null, 2); }
+
+    /* handout */
+    function generateHandout(showFull = false) {
+      const id = document.getElementById('field-id').value.trim();
+      if (!id || !espData[id]) return alert('Nenhum espólio selecionado');
+      const e = espData[id];
+      let html = `<div style="font-family:Inter,Arial,sans-serif;color:#fff;background:#070707;padding:12px;border-radius:8px">`;
+      html += `<h2 style="color:${'#b31217'}">${e.title} <small style="color:#bbb">[Rank ${e.rank}]</small></h2>`;
+      html += `<p style="color:#ccc">${e.description || ''}</p>`;
+      if (showFull || e.visibility !== 'title-only') {
+        html += `<h4>Requisitos</h4><p style="color:#ddd;font-size:15px">${e.requirements || '—'}</p>`;
+        html += `<h4>Thresholds & Bônus</h4><ul style="color:#ddd">`;
+        (e.thresholds || []).forEach((t, i) => { html += `<li>Lv${i + 1} — ${t} → <code>${JSON.stringify(e.bonuses[String(i + 1)] || {})}</code></li>`; });
+        html += `</ul>`;
+        if ((e.factionRestriction || []).length) html += `<p style="color:#ccc">Factions: ${e.factionRestriction.join(', ')}</p>`;
+        if ((e.raceRestriction || []).length) html += `<p style="color:#ccc">Raças: ${e.raceRestriction.join(', ')}</p>`;
+      } else {
+        html += `<p style="color:#aaa"><em>Detalhes ocultos — apenas título revelado.</em></p>`;
+      }
+      html += `</div>`;
+      return html;
+    }
+
+    /* copy helper */
+    function copyToClipboard(text) { navigator.clipboard.writeText(text).then(() => alert('Copiado para área de transferência')); }
+
+    /* import file content */
+    function importFileContent(txt) {
+      try {
+        let data = txt;
+        if (typeof txt === 'string' && txt.includes('ESPOLIOS_DEFINITIONS')) {
+          const m = txt.match(/ESPOLIOS_DEFINITIONS\s*=\s*(\{[\\s\\S]*\});?/);
+          if (m) data = m[1];
+        }
+        const obj = JSON.parse(data);
+        const map = Array.isArray(obj) ? obj.reduce((acc, it) => { acc[it.id || slugify(it.title || 'esp')] = it; return acc; }, {}) : obj;
+        const choice = prompt('Importar: escolha (merge / replace). merge = combina, replace = substitui tudo. Digite merge ou replace.');
+        if (choice === 'replace') { pushHistory(); espData = map; renderList(); renderPreview(); alert('Substituído.'); localStorage.setItem('espData_v4', JSON.stringify(espData)); return; }
+        pushHistory();
+        Object.entries(map).forEach(([k, v]) => { espData[k] = v; });
+        renderList(); renderPreview(); localStorage.setItem('espData_v4', JSON.stringify(espData));
+        alert('Importado e mesclado.');
+      } catch (err) { alert('Falha ao importar: ' + err.message); }
+    }
+
+    /* load strategy: try espolios.json via fetch, fallback to localStorage, fallback to initialData */
+    tryLoadLocalJSON();
+
+    /* initial render handlers */
+    document.getElementById('btn-new').addEventListener('click', () => { document.getElementById('espForm').reset(); document.getElementById('field-id').disabled = false; currentBonuses = {}; renderLevelsTabs(1); renderBonusesEditor({}); lastEdit.textContent = '-'; });
+    document.getElementById('btn-save').addEventListener('click', saveCurrentForm);
+    document.getElementById('btn-delete').addEventListener('click', deleteCurrent);
+    document.getElementById('btn-copy-json').addEventListener('click', () => { copyToClipboard(JSON.stringify(espData, null, 2)); });
+    document.getElementById('btn-handout').addEventListener('click', () => { document.getElementById('handoutHtml').innerHTML = generateHandout(false); document.getElementById('modalHandout').style.display = 'flex'; });
+    document.getElementById('closeHandout').addEventListener('click', () => { document.getElementById('modalHandout').style.display = 'none'; });
+    document.getElementById('copyHandout').addEventListener('click', () => { copyToClipboard(document.getElementById('handoutHtml').innerHTML); });
+    document.getElementById('btn-add-threshold').addEventListener('click', () => addThreshold(document.getElementById('newThreshold').value));
+    document.getElementById('btn-undo').addEventListener('click', undo);
+    document.getElementById('search').addEventListener('input', (e) => renderList(e.target.value));
+    document.getElementById('btn-download-sample').addEventListener('click', () => { const blob = new Blob([JSON.stringify(initialData, null, 2)], { type: 'application/json' }); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'exemplo_espolios.json'; document.body.appendChild(a); a.click(); a.remove(); });
+    document.getElementById('btn-export-json').addEventListener('click', () => { const blob = new Blob([JSON.stringify(espData, null, 2)], { type: 'application/json' }); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'espolios.json'; document.body.appendChild(a); a.click(); a.remove(); });
+    document.getElementById('btn-export-js').addEventListener('click', () => { const content = 'const ESPOLIOS_DEFINITIONS = ' + JSON.stringify(espData, null, 2) + ';\n\nexport default ESPOLIOS_DEFINITIONS;'; const blob = new Blob([content], { type: 'application/javascript' }); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'espolios.js'; document.body.appendChild(a); a.click(); a.remove(); });
+
+    /* import file input */
+    document.getElementById('btn-import').addEventListener('click', () => document.getElementById('file-input').click());
+    document.getElementById('file-input').addEventListener('change', (ev) => { const file = ev.target.files[0]; if (!file) return; const reader = new FileReader(); reader.onload = e => importFileContent(e.target.result); reader.readAsText(file); ev.target.value = null; });
+
+    /* auto slug generation */
+    document.getElementById('field-title').addEventListener('input', (e) => {
+      const idField = document.getElementById('field-id');
+      if (idField.disabled || idField.value.trim() !== '') return;
+      idField.value = slugify(e.target.value);
+    });
+
+  </script>
+</body>
+
+</html>

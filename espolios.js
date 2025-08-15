@@ -1,0 +1,2162 @@
+// espolios.js (modo global, funciona sem servidor)
+window.ESPOLIOS_DEFINITIONS = window.ESPOLIOS_DEFINITIONS || {
+  "arima_white_reaper_quinque": {
+    "id": "arima_white_reaper_quinque",
+    "title": "Quinque do Ceifador Branco",
+    "rank": 5,
+    "maxLevel": 1,
+    "thresholds": [
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "unique_item": "Quinque — White Reaper",
+        "for": 20,
+        "dano_vs_boss": 20
+      }
+    },
+    "requirements": "Derrotar Kishou Arima em combate singular (evento/raid).",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "O Quinque lendário herdado do Ceifador Branco — item único e devastador."
+  },
+  "arima_mastery_of_strike": {
+    "id": "arima_mastery_of_strike",
+    "title": "Mestre do Golpe Cirúrgico",
+    "rank": 5,
+    "maxLevel": 3,
+    "thresholds": [
+      1,
+      3,
+      5
+    ],
+    "bonuses": {
+      "1": {
+        "for": 5,
+        "provocar": 2
+      },
+      "2": {
+        "for": 10,
+        "des": 4,
+        "provocar": 4
+      },
+      "3": {
+        "for": 20,
+        "des": 8,
+        "ability": "Golpe Cirúrgico"
+      }
+    },
+    "requirements": "Estudar/replicar técnicas de Arima em 1 / 3 / 5 confrontos de alto nível ou sessões de treino guiadas.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Técnicas mortais e precisão de Arima — concede bônus em dano e precisão."
+  },
+  "arima_reaper_tactics": {
+    "id": "arima_reaper_tactics",
+    "title": "Táticas do Ceifador",
+    "rank": 5,
+    "maxLevel": 3,
+    "thresholds": [
+      1,
+      2,
+      4
+    ],
+    "bonuses": {
+      "1": {
+        "investigacao": 3,
+        "int": 3
+      },
+      "2": {
+        "investigacao": 6,
+        "int": 6,
+        "per": 2
+      },
+      "3": {
+        "investigacao": 10,
+        "int": 10,
+        "ability": "Calculista Implacável"
+      }
+    },
+    "requirements": "Analisar relatórios e encenações do estilo de combate de Arima: 1 / 2 / 4 estudos completos.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Modelos táticos que melhoram investigação e tomada de decisão em combate."
+  },
+  "arima_core_fragment": {
+    "id": "arima_core_fragment",
+    "title": "Fragmento do Núcleo Reconstruído",
+    "rank": 5,
+    "maxLevel": 2,
+    "thresholds": [
+      1,
+      3
+    ],
+    "bonuses": {
+      "1": {
+        "rc": 10
+      },
+      "2": {
+        "rc": 25,
+        "regen": 1
+      }
+    },
+    "requirements": "Recuperar fragmentos do corpo/RC de Arima (1 fragmento / 3 fragmentos).",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Peças do processo de reconstrução — aumentam RC e regeneração."
+  },
+  "arima_reconstruction_protocol": {
+    "id": "arima_reconstruction_protocol",
+    "title": "Protocolo de Reconstrução — CCG",
+    "rank": 5,
+    "maxLevel": 1,
+    "thresholds": [
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "access_item": "Protocolo de Reconstrução (CCG)",
+        "int": 8
+      }
+    },
+    "requirements": "Apropriar-se dos arquivos secretos usados na recriação de Arima (evento/loot).",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Dados da CCG sobre reconstrução de corpos — acesso a técnicas e recursos raros."
+  },
+  "arima_vault_keys": {
+    "id": "arima_vault_keys",
+    "title": "Chaves do Cofre do Ceifador",
+    "rank": 4,
+    "maxLevel": 1,
+    "thresholds": [
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "access_item": "Chaves de Cofre CCG - Arima",
+        "loot_chance_pct": 15
+      }
+    },
+    "requirements": "Localizar/coletar chaves e credenciais pessoais de Arima.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Permitem acesso a arquivos confidenciais e loot raro dentro de instalações CCG."
+  },
+  "arima_legacy_of_the_reaper": {
+    "id": "arima_legacy_of_the_reaper",
+    "title": "Legado do Ceifador",
+    "rank": 5,
+    "maxLevel": 3,
+    "thresholds": [
+      1,
+      2,
+      3
+    ],
+    "bonuses": {
+      "1": {
+        "car": 3,
+        "influencia": 2
+      },
+      "2": {
+        "car": 6,
+        "influencia": 4,
+        "status": "Temido"
+      },
+      "3": {
+        "car": 10,
+        "influencia": 8,
+        "ability": "Presença do Reaper"
+      }
+    },
+    "requirements": "Concluir arcos narrativos/quests centrais que envolvem Arima (1 / 2 / 3 marcos).",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Nome e legado social que abrem portas e impõem respeito (ou medo)."
+  },
+  "arima_hunter_instinct": {
+    "id": "arima_hunter_instinct",
+    "title": "Instinto do Caçador",
+    "rank": 5,
+    "maxLevel": 3,
+    "thresholds": [
+      1,
+      5,
+      15
+    ],
+    "bonuses": {
+      "1": {
+        "per": 4
+      },
+      "2": {
+        "per": 8,
+        "esquiva": 3
+      },
+      "3": {
+        "per": 15,
+        "esquiva": 6,
+        "ability": "Predador Suprem o"
+      }
+    },
+    "requirements": "Sobreviver a encontros diretos com Arima / escapar de emboscadas inspiradas nele (contagens cumulativas).",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Aptidões sensoriais e reflexos herdados por estudar o padrão do ceifador."
+  },
+  "arima_forbidden_blood": {
+    "id": "arima_forbidden_blood",
+    "title": "Sangue Proibido",
+    "rank": 5,
+    "maxLevel": 1,
+    "thresholds": [
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "ability": "Corrupção de RC",
+        "rc": 30
+      }
+    },
+    "requirements": "Ritual ou experimento com vestígios de sangue/reconstrução de Arima (evento narrativo de alto risco).",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Poder instável: grande aumento de RC mas com custo (sugerido: definir penalidades narrativas)."
+  },
+  "arima_ultimate_memory": {
+    "id": "arima_ultimate_memory",
+    "title": "Memória Suprema — Arquivo Arima",
+    "rank": 5,
+    "maxLevel": 1,
+    "thresholds": [
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "int": 12,
+        "investigacao": 6,
+        "unique_item": "Arquivo Tático — Arima"
+      }
+    },
+    "requirements": "Capturar/decodificar registro privado contendo experiências, memórias de combate e movimentos exclusivos de Arima.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Conhecimento que transforma entendimentos táticos do grupo — item/arquivo único."
+  },
+  "hyde_washuu_insignia": {
+    "id": "hyde_washuu_insignia",
+    "title": "Insígnia Washuu — Hydeyoshi",
+    "rank": 3,
+    "maxLevel": 1,
+    "thresholds": [
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "access_item": "Insígnia Washuu — Hydeyoshi",
+        "influencia": 3
+      }
+    },
+    "requirements": "Receber/convencer Hydeyoshi a conceder a insígnia (roleplay/missão).",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Marca de confiança dos Washuu — acesso e influência em círculos de segurança."
+  },
+  "hyde_casefiles": {
+    "id": "hyde_casefiles",
+    "title": "Arquivos de Investigação — Hyde",
+    "rank": 3,
+    "maxLevel": 3,
+    "thresholds": [
+      1,
+      5,
+      12
+    ],
+    "bonuses": {
+      "1": {
+        "investigacao": 3
+      },
+      "2": {
+        "investigacao": 6,
+        "per": 4
+      },
+      "3": {
+        "investigacao": 10,
+        "per": 8,
+        "ability": "Olhar de Tio Hyde"
+      }
+    },
+    "requirements": "Acompanhar Hydeyoshi em operações investigativas e catalogar casos (1 / 5 / 12).",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Casos e anotações que treinam a percepção investigativa e revelam pistas exclusivas."
+  },
+  "hyde_safehouse_keys": {
+    "id": "hyde_safehouse_keys",
+    "title": "Chaves de Abrigo Seguro",
+    "rank": 2,
+    "maxLevel": 1,
+    "thresholds": [
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "access_item": "Chaves — Abrigo Washuu",
+        "inv_capacity": 1
+      }
+    },
+    "requirements": "Provar lealdade/proteger civis sob a supervisão de Hydeyoshi (missão).",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Acesso a um local seguro com recursos — utilitário em campanhas urbanas."
+  },
+  "hyde_mentor_counsel": {
+    "id": "hyde_mentor_counsel",
+    "title": "Conselho do Mentor — Hydeyoshi",
+    "rank": 3,
+    "maxLevel": 2,
+    "thresholds": [
+      1,
+      3
+    ],
+    "bonuses": {
+      "1": {
+        "car": 3,
+        "manipulacao": 2
+      },
+      "2": {
+        "car": 6,
+        "manipulacao": 4,
+        "ability": "Proteção Tio Hyde"
+      }
+    },
+    "requirements": "Receber conselhos/treinamento de Hydeyoshi em 1 / 3 ocasiões — proteger civis e manter ordem.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Orientação social e tática — aumenta carisma e habilidade social/protetiva."
+  },
+  "cacador_carmesim": {
+    "id": "cacador_carmesim",
+    "title": "Caçador Carmesim",
+    "rank": 3,
+    "maxLevel": 3,
+    "thresholds": [
+      30,
+      100,
+      300
+    ],
+    "bonuses": {
+      "1": {
+        "rc": 5
+      },
+      "2": {
+        "rc": 10,
+        "res": 1
+      },
+      "3": {
+        "rc": 20,
+        "ability": "Voraz"
+      }
+    },
+    "requirements": "Como Ghoul: alimentar-se de 30 / 100 / 300 presas (mesma campanha ou sessão longa).",
+    "visibility": "title-only",
+    "raceRestriction": [
+      "Ghoul Puro",
+      "Meio-Ghoul (Quinx)",
+      "Híbrido"
+    ],
+    "factionRestriction": [],
+    "description": "A fome que te guia: consome presas e cresce em poder."
+  },
+  "fome_de_oni": {
+    "id": "fome_de_oni",
+    "title": "Fome de Oni",
+    "rank": 5,
+    "maxLevel": 3,
+    "thresholds": [
+      5,
+      20,
+      50
+    ],
+    "bonuses": {
+      "1": {
+        "unlock_option": "transform_apto"
+      },
+      "2": {
+        "hybrid_chance_pct": 20
+      },
+      "3": {
+        "transform": "ghoul_permanente"
+      }
+    },
+    "requirements": "Humano: consumir RC de ghouls/humanos 5 / 20 / 50 vezes.",
+    "visibility": "title-only",
+    "raceRestriction": [
+      "Humano"
+    ],
+    "factionRestriction": [],
+    "description": "Caminho perigoso: transforma a fome em mudança irreversível."
+  },
+  "cacador_de_lobos": {
+    "id": "cacador_de_lobos",
+    "title": "Caçador de Lobos",
+    "rank": 2,
+    "maxLevel": 3,
+    "thresholds": [
+      5,
+      20,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "dano_vs_lobos": 15
+      },
+      "2": {
+        "dano_vs_lobos": 30
+      },
+      "3": {
+        "dano_vs_lobos": 50,
+        "title": "O Último Uivo"
+      }
+    },
+    "requirements": "Matar 5 / 20 lobos ferozes; nível 3 exige derrotar chefe 'Lobo Errante'.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Especialização contra bestas selvagens."
+  },
+  "quinx_purger": {
+    "id": "quinx_purger",
+    "title": "Quinx Purger",
+    "rank": 3,
+    "maxLevel": 3,
+    "thresholds": [
+      10,
+      40,
+      100
+    ],
+    "bonuses": {
+      "1": {
+        "comb_quinq": 2
+      },
+      "2": {
+        "comb_quinq": 4
+      },
+      "3": {
+        "comb_quinq": 6,
+        "ability": "Estilhaçar"
+      }
+    },
+    "requirements": "Como Quinx: eliminar 10 / 40 / 100 ghouls usando Quinque.",
+    "visibility": "title-only",
+    "raceRestriction": [
+      "Meio-Ghoul (Quinx)"
+    ],
+    "factionRestriction": [],
+    "description": "Treinamento Quinx: precisão e força com Quinque."
+  },
+  "legado_washuu": {
+    "id": "legado_washuu",
+    "title": "Legado Washuu",
+    "rank": 4,
+    "maxLevel": 3,
+    "thresholds": [
+      3,
+      6,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "int": 2,
+        "car": 2
+      },
+      "2": {
+        "int": 4,
+        "car": 4
+      },
+      "3": {
+        "int": 6,
+        "status": "Nobre",
+        "access_item": "Relíquia Washuu"
+      }
+    },
+    "requirements": "Completar rituais/provas da família Washuu: 3 / 6 / prova suprema.",
+    "visibility": "title-only",
+    "raceRestriction": [
+      "Washuu"
+    ],
+    "factionRestriction": [
+      "Família Washuu"
+    ],
+    "description": "Sangue e tradição: influência e recursos da família."
+  },
+  "operador_v": {
+    "id": "operador_v",
+    "title": "Operador V",
+    "rank": 5,
+    "maxLevel": 3,
+    "thresholds": [
+      1,
+      3,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "hack": 3
+      },
+      "2": {
+        "hack": 6,
+        "network": 1
+      },
+      "3": {
+        "hack": 10,
+        "ability": "Rede V"
+      }
+    },
+    "requirements": "Organização V: completar 1 / 3 / liderar operações clandestinas.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [
+      "Organização V"
+    ],
+    "description": "Operações secretas: acesso à rede e vantagem tecnológica."
+  },
+  "cacador_de_quinques": {
+    "id": "cacador_de_quinques",
+    "title": "Caçador de Quinques",
+    "rank": 1,
+    "maxLevel": 3,
+    "thresholds": [
+      2,
+      6,
+      12
+    ],
+    "bonuses": {
+      "1": {
+        "conhecimento_ghouls": 1
+      },
+      "2": {
+        "conhecimento_ghouls": 2
+      },
+      "3": {
+        "conhecimento_ghouls": 3,
+        "loot_chance_pct": 10
+      }
+    },
+    "requirements": "Destruir 2 / 6 / 12 quinques NPC encontradas.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Perseguir e desmontar quinques para conhecimento e peças."
+  },
+  "palhaco_do_caos": {
+    "id": "palhaco_do_caos",
+    "title": "Palhaço do Caos",
+    "rank": 3,
+    "maxLevel": 3,
+    "thresholds": [
+      1,
+      3,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "provocar": 2
+      },
+      "2": {
+        "provocar": 4,
+        "negociacao": 1
+      },
+      "3": {
+        "provocar": 6,
+        "ability": "Célula de Caos"
+      }
+    },
+    "requirements": "Pierrots: executar ato de terror 1 / 3 / comandar célula.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [
+      "Palhaços (Pierrots)"
+    ],
+    "description": "Terror e manipulação: intimidação e ganhos sombrios."
+  },
+  "jardineiro_curador": {
+    "id": "jardineiro_curador",
+    "title": "Jardineiro Curador",
+    "rank": 2,
+    "maxLevel": 3,
+    "thresholds": [
+      5,
+      20,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "medicina": 2
+      },
+      "2": {
+        "medicina": 4
+      },
+      "3": {
+        "medicina": 6,
+        "item": "Antídoto Raro"
+      }
+    },
+    "requirements": "Jardim: preparar 5 / 20 / descobrir receita rara de antídoto.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [
+      "Jardim (Sunlit Garden)"
+    ],
+    "description": "Cura e ciência: recursos médicos exclusivos."
+  },
+  "sombra_do_ccg": {
+    "id": "sombra_do_ccg",
+    "title": "Sombra do CCG",
+    "rank": 3,
+    "maxLevel": 3,
+    "thresholds": [
+      1,
+      3,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "investigacao": 2
+      },
+      "2": {
+        "investigacao": 4,
+        "stealth": 2
+      },
+      "3": {
+        "investigacao": 6,
+        "authority": 1
+      }
+    },
+    "requirements": "CCG: infiltrar-se em base inimiga e coletar provas 1 / 3 / liderar infiltração.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [
+      "CCG"
+    ],
+    "description": "Inteligência e acesso: uso institucional do conhecimento."
+  },
+  "devora_lendas": {
+    "id": "devora_lendas",
+    "title": "Devora-Lendas",
+    "rank": 5,
+    "maxLevel": 1,
+    "thresholds": [
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "unique_item": "Espada Devora-Lendas",
+        "int": 10
+      }
+    },
+    "requirements": "Matar boss icônico X (evento) — espólio único.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Um feito lendário — recompensa única e irreversível."
+  },
+  "forja_de_quinque": {
+    "id": "forja_de_quinque",
+    "title": "Forja de Quinque",
+    "rank": 2,
+    "maxLevel": 3,
+    "thresholds": [
+      10,
+      30,
+      80
+    ],
+    "bonuses": {
+      "1": {
+        "artesao": 1
+      },
+      "2": {
+        "artesao": 3
+      },
+      "3": {
+        "artesao": 5,
+        "chance_piece_pct": 10
+      }
+    },
+    "requirements": "Reunir 10 / 30 / 80 peças e forjar uma Quinque.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Artesanato especializado: criar e melhorar quinques."
+  },
+  "lamina_solitária": {
+    "id": "lamina_solitária",
+    "title": "Lâmina Solitária",
+    "rank": 1,
+    "maxLevel": 3,
+    "thresholds": [
+      10,
+      40,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "dano_faca": 5
+      },
+      "2": {
+        "dano_faca": 10
+      },
+      "3": {
+        "dano_faca": 20,
+        "title": "Lâmina"
+      }
+    },
+    "requirements": "Vencer 10 / 40 / vencer torneio regional com faca.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Especialista em lâminas: títulos e técnicas letais."
+  },
+  "oni_despertar": {
+    "id": "oni_despertar",
+    "title": "Oni Despertar",
+    "rank": 4,
+    "maxLevel": 3,
+    "thresholds": [
+      50,
+      150,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "for": 10
+      },
+      "2": {
+        "for": 20
+      },
+      "3": {
+        "transform_partial": true
+      }
+    },
+    "requirements": "Humano: consumir RC proibido 50 / 150 / evento final.",
+    "visibility": "title-only",
+    "raceRestriction": [
+      "Humano"
+    ],
+    "factionRestriction": [],
+    "description": "Risco e poder: força brutal à custa da sanidade."
+  },
+  "guardiao_do_jardim": {
+    "id": "guardiao_do_jardim",
+    "title": "Guardião do Jardim",
+    "rank": 3,
+    "maxLevel": 3,
+    "thresholds": [
+      3,
+      7,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "medicina": 2,
+        "empatia": 2
+      },
+      "2": {
+        "medicina": 4,
+        "empatia": 4
+      },
+      "3": {
+        "medicina": 6,
+        "title": "Guardião"
+      }
+    },
+    "requirements": "Defender o Jardim: repelir 3 / 7 ataques; nível máximo requer liderança.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [
+      "Jardim (Sunlit Garden)"
+    ],
+    "description": "Protege e cura: liderança médica em combate."
+  },
+  "mercador_sombrio": {
+    "id": "mercador_sombrio",
+    "title": "Mercador Sombrio",
+    "rank": 2,
+    "maxLevel": 3,
+    "thresholds": [
+      20,
+      60,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "negociacao": 2
+      },
+      "2": {
+        "negociacao": 4,
+        "discount_pct": 5
+      },
+      "3": {
+        "negociacao": 6,
+        "discount_pct": 10
+      }
+    },
+    "requirements": "Vender/negociar itens raros 20 / 60 / estabelecer rede de contrabando.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Comércio clandestino: lucro e descontos permanentes."
+  },
+  "sangue_de_washuu": {
+    "id": "sangue_de_washuu",
+    "title": "Sangue de Washuu",
+    "rank": 4,
+    "maxLevel": 3,
+    "thresholds": [
+      1,
+      3,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "car": 3
+      },
+      "2": {
+        "int": 5,
+        "car": 5
+      },
+      "3": {
+        "status": "Nobre",
+        "access_item": "Relíquia"
+      }
+    },
+    "requirements": "Provas internas Washuu: 1 / 3 / herdar relíquia.",
+    "visibility": "title-only",
+    "raceRestriction": [
+      "Washuu"
+    ],
+    "factionRestriction": [
+      "Família Washuu"
+    ],
+    "description": "Títulos e privilégios: influência política e recursos."
+  },
+  "ceu_de_ukaku": {
+    "id": "ceu_de_ukaku",
+    "title": "Céu de Ukaku",
+    "rank": 3,
+    "maxLevel": 3,
+    "thresholds": [
+      30,
+      100,
+      300
+    ],
+    "bonuses": {
+      "1": {
+        "des": 2
+      },
+      "2": {
+        "des": 4,
+        "dano_dist": 10
+      },
+      "3": {
+        "des": 6,
+        "dano_dist": 20
+      }
+    },
+    "requirements": "Ukaku: realizar ataques à distância efetivos 30 / 100 / 300 vezes.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Mestra das flechas: precisão e poder à distância."
+  },
+  "casco_de_koukaku": {
+    "id": "casco_de_koukaku",
+    "title": "Casco de Koukaku",
+    "rank": 3,
+    "maxLevel": 3,
+    "thresholds": [
+      50,
+      200,
+      500
+    ],
+    "bonuses": {
+      "1": {
+        "res": 2
+      },
+      "2": {
+        "res": 4,
+        "for": 2
+      },
+      "3": {
+        "res": 6,
+        "ability": "Barreira"
+      }
+    },
+    "requirements": "Koukaku: bloquear/absorver dano 50 / 200 / 500 vezes.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Defesa absoluta: resistência física superior."
+  },
+  "corpo_de_rinkaku": {
+    "id": "corpo_de_rinkaku",
+    "title": "Corpo de Rinkaku",
+    "rank": 3,
+    "maxLevel": 3,
+    "thresholds": [
+      10,
+      50,
+      200
+    ],
+    "bonuses": {
+      "1": {
+        "for": 2
+      },
+      "2": {
+        "for": 4,
+        "rc": 2
+      },
+      "3": {
+        "for": 6,
+        "rc": 5,
+        "regen": 1
+      }
+    },
+    "requirements": "Rinkaku: recuperar grandes ferimentos 10 / 50 / 200 vezes.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Regeneração e força: cura e dano ampliados."
+  },
+  "equilibrio_bikaku": {
+    "id": "equilibrio_bikaku",
+    "title": "Equilíbrio Bikaku",
+    "rank": 2,
+    "maxLevel": 3,
+    "thresholds": [
+      50,
+      200,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "for": 1,
+        "res": 1,
+        "rc": 1
+      },
+      "2": {
+        "for": 2,
+        "res": 2,
+        "rc": 2
+      },
+      "3": {
+        "for": 3,
+        "res": 3,
+        "rc": 3
+      }
+    },
+    "requirements": "Bikaku: vencer 50 combates demonstrando versatilidade; evolui com mais vitórias.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Versatilidade na batalha: equilíbrio entre atributos."
+  },
+  "dont_you_know_im_still_stand": {
+    "id": "dont_you_know_im_still_stand",
+    "title": "Dont you know - Im still stand!",
+    "rank": 4,
+    "maxLevel": 3,
+    "thresholds": [
+      3,
+      8,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "for": 2,
+        "res": 2,
+        "rc": 1,
+        "passive": "O portador no auge do seus limites adquire habilidade de cura para se manter em combate, pode curar 4d8 de HP após receber qualquer fonte de cura. (Excesso de cura não sobrepõe HP maximo e perde turno ao se curar).",
+        "description": "Primeira marca do renascer — a ferida vira impulso e a força sobe. -Better than i ever did-"
+      },
+      "2": {
+        "for": 4,
+        "res": 4,
+        "rc": 2,
+        "regen": 1,
+        "passive": "Agora o valor da cura em combate também é direcionada ao RC do portador, que pode curar 6d8 de HP e RC após receber qualquer fonte de cura. (Excesso de cura não sobrepõe HP ou RC máximo e perde turno ao se curar).",
+        "description": "O corpo aprende a reverter a queda em impulso — recuperação e força amplificadas. - Looking like a true survivor -"
+      },
+      "3": {
+        "for": 8,
+        "res": 8,
+        "rc": 4,
+        "ability": "I'm Still Standing",
+        "passive": "Ao atingir o limite de cura uma vez em batalha os ataques do portador se adiquirem 'Sedenta de sangue' onde qualquer fonte de ataque irá roubar a vida dos inimigos, curando o portador em 50% do dano causado. (Excesso de cura não sobrepõe HP ou RC máximo).",
+        "description": "Transcendência pela sobrevivência — cada encontro dessa natureza tempera o corpo, tornando-o capaz de zombar da morte. - I'm feeling like a little kid -"
+      }
+    },
+    "requirements": "Enfrentar oponentes muito mais fortes (3 / 8 / 1 vezes conforme o nível) e sobreviver mantendo o HP entre 10% e 15% no momento da vitória ou fuga.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Um selo que nasce na carne após sorrir para a morte. Golpes mais pesados, sangue que reage e cura que brota no calor da batalha."
+  },
+  "archivista_de_ghouls": {
+    "id": "archivista_de_ghouls",
+    "title": "Archivista de Ghouls",
+    "rank": 2,
+    "maxLevel": 3,
+    "thresholds": [
+      10,
+      30,
+      100
+    ],
+    "bonuses": {
+      "1": {
+        "conhecimento_ghouls": 2
+      },
+      "2": {
+        "conhecimento_ghouls": 4,
+        "investigacao": 1
+      },
+      "3": {
+        "conhecimento_ghouls": 6,
+        "investigacao": 2
+      }
+    },
+    "requirements": "Catalogar registros de ghouls: 10 / 30 / 100 entradas.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Conhecimento sistematizado: vantagem contra ghouls."
+  },
+  "cacador_de_reputacao": {
+    "id": "cacador_de_reputacao",
+    "title": "Caçador de Reputação",
+    "rank": 1,
+    "maxLevel": 3,
+    "thresholds": [
+      5,
+      20,
+      50
+    ],
+    "bonuses": {
+      "1": {
+        "influencia": 1
+      },
+      "2": {
+        "influencia": 2
+      },
+      "3": {
+        "influencia": 3,
+        "money_bonus": 10
+      }
+    },
+    "requirements": "Cumprir contratos de caça 5 / 20 / 50.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Contratos: fama e lucro."
+  },
+  "olho_clinico": {
+    "id": "olho_clinico",
+    "title": "Olho Clínico",
+    "rank": 2,
+    "maxLevel": 3,
+    "thresholds": [
+      10,
+      40,
+      100
+    ],
+    "bonuses": {
+      "1": {
+        "per": 2
+      },
+      "2": {
+        "per": 4,
+        "medicina": 1
+      },
+      "3": {
+        "per": 6,
+        "medicina": 3
+      }
+    },
+    "requirements": "Diagnosticar mutações: 10 / 40 / 100 casos.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Precisão diagnóstica: descobrir fraquezas e curas."
+  },
+  "senhor_das_sombras": {
+    "id": "senhor_das_sombras",
+    "title": "Senhor das Sombras",
+    "rank": 4,
+    "maxLevel": 3,
+    "thresholds": [
+      3,
+      10,
+      30
+    ],
+    "bonuses": {
+      "1": {
+        "stealth": 2
+      },
+      "2": {
+        "stealth": 4,
+        "network": 1
+      },
+      "3": {
+        "stealth": 6,
+        "network": 3
+      }
+    },
+    "requirements": "Comandar rede de informantes 3 / 10 / 30.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Informação é poder: manipule o submundo."
+  },
+  "alquimista_do_jardim": {
+    "id": "alquimista_do_jardim",
+    "title": "Alquimista do Jardim",
+    "rank": 3,
+    "maxLevel": 3,
+    "thresholds": [
+      5,
+      20,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "culinaria_antidotos": 2
+      },
+      "2": {
+        "culinaria_antidotos": 4
+      },
+      "3": {
+        "culinaria_antidotos": 6,
+        "item": "Antídoto Raro"
+      }
+    },
+    "requirements": "Criar antídotos raros 5 / 20 / descobrir receita secreta.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [
+      "Jardim (Sunlit Garden)"
+    ],
+    "description": "Master em curas experimentais e receitas."
+  },
+  "colecionador_de_quinx": {
+    "id": "colecionador_de_quinx",
+    "title": "Colecionador de Quinx",
+    "rank": 3,
+    "maxLevel": 3,
+    "thresholds": [
+      5,
+      20,
+      50
+    ],
+    "bonuses": {
+      "1": {
+        "comb_quinq": 2
+      },
+      "2": {
+        "comb_quinq": 4
+      },
+      "3": {
+        "comb_quinq": 6,
+        "loot_piece_pct": 10
+      }
+    },
+    "requirements": "Neutralizar Quinx em missões: 5 / 20 / 50.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [
+      "CCG"
+    ],
+    "description": "Especialista em Quinx: vantagem em confrontos específicos."
+  },
+  "forca_bruta": {
+    "id": "forca_bruta",
+    "title": "Força Bruta",
+    "rank": 2,
+    "maxLevel": 3,
+    "thresholds": [
+      50000,
+      200000,
+      1000000
+    ],
+    "bonuses": {
+      "1": {
+        "for": 1
+      },
+      "2": {
+        "for": 2
+      },
+      "3": {
+        "for": 3
+      }
+    },
+    "requirements": "Causar dano total acumulado em combates: 50k / 200k / 1M.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Dano bruto acumulado recompensa força permanente."
+  },
+  "perseguidor_urbano": {
+    "id": "perseguidor_urbano",
+    "title": "Perseguidor Urbano",
+    "rank": 2,
+    "maxLevel": 3,
+    "thresholds": [
+      30,
+      100,
+      300
+    ],
+    "bonuses": {
+      "1": {
+        "esquiva": 2
+      },
+      "2": {
+        "esquiva": 4,
+        "stealth": 1
+      },
+      "3": {
+        "esquiva": 6,
+        "stealth": 3
+      }
+    },
+    "requirements": "Concluir perseguições com sucesso: 30 / 100 / 300.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Perseguições urbanas aumentam reflexos e furtividade."
+  },
+  "mestre_do_mercado": {
+    "id": "mestre_do_mercado",
+    "title": "Mestre do Mercado",
+    "rank": 2,
+    "maxLevel": 3,
+    "thresholds": [
+      5,
+      15,
+      30
+    ],
+    "bonuses": {
+      "1": {
+        "negociacao": 1
+      },
+      "2": {
+        "negociacao": 3,
+        "discount_pct": 5
+      },
+      "3": {
+        "negociacao": 5,
+        "discount_pct": 10
+      }
+    },
+    "requirements": "Criar parceiros comerciais / negociar itens raros: 5 / 15 / 30.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Habilidade com negócios e vantagens comerciais."
+  },
+  "selo_da_v": {
+    "id": "selo_da_v",
+    "title": "Selo da V",
+    "rank": 5,
+    "maxLevel": 3,
+    "thresholds": [
+      1,
+      3,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "tech": 2
+      },
+      "2": {
+        "tech": 4,
+        "network": 1
+      },
+      "3": {
+        "tech": 6,
+        "access_v": 1
+      }
+    },
+    "requirements": "Missões de alto risco da V: completar 1 / 3 / liderar operações.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [
+      "Organização V"
+    ],
+    "description": "Privilégios da V: tecnologia e contatos exclusivos."
+  },
+  "santo_do_sangue": {
+    "id": "santo_do_sangue",
+    "title": "Santo do Sangue",
+    "rank": 4,
+    "maxLevel": 3,
+    "thresholds": [
+      3,
+      10,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "rc": 2
+      },
+      "2": {
+        "rc": 4,
+        "res": 2
+      },
+      "3": {
+        "rc": 6,
+        "ability": "Sangue Sagrado"
+      }
+    },
+    "requirements": "Participar de rituais de sangue: 3 / 10 / evento culto.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Poderes de sangue e resistência mental aumentada."
+  },
+  "cacador_de_bunkers": {
+    "id": "cacador_de_bunkers",
+    "title": "Caçador de Bunkers",
+    "rank": 3,
+    "maxLevel": 3,
+    "thresholds": [
+      3,
+      10,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "investigacao": 2
+      },
+      "2": {
+        "investigacao": 4,
+        "comb_dist": 2
+      },
+      "3": {
+        "investigacao": 6,
+        "loot": "Maquina"
+      }
+    },
+    "requirements": "Invadir bunkers subterrâneos: 3 / 10 / base fortificada.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Acesso a locais fortificados e recompensas de alto valor."
+  },
+  "operario_das_sombras": {
+    "id": "operario_das_sombras",
+    "title": "Operário das Sombras",
+    "rank": 1,
+    "maxLevel": 3,
+    "thresholds": [
+      10,
+      40,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "hack": 1
+      },
+      "2": {
+        "hack": 2
+      },
+      "3": {
+        "hack": 3,
+        "loot_mech_pct": 10
+      }
+    },
+    "requirements": "Sabotar instalações: 10 / 40 / sabotagens em cadeia.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Sabotagem industrial e ganhos tecnológicos."
+  },
+  "senescal_do_conselho": {
+    "id": "senescal_do_conselho",
+    "title": "Senescal do Conselho",
+    "rank": 4,
+    "maxLevel": 3,
+    "thresholds": [
+      1,
+      5,
+      15
+    ],
+    "bonuses": {
+      "1": {
+        "car": 2
+      },
+      "2": {
+        "car": 4,
+        "influencia": 1
+      },
+      "3": {
+        "car": 6,
+        "influencia": 3
+      }
+    },
+    "requirements": "Manipular decisões políticas: 1 / 5 / 15 influências.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Poder político e influência em larga escala."
+  },
+  "ecos_do_passado": {
+    "id": "ecos_do_passado",
+    "title": "Ecos do Passado",
+    "rank": 2,
+    "maxLevel": 3,
+    "thresholds": [
+      10,
+      30,
+      100
+    ],
+    "bonuses": {
+      "1": {
+        "int": 1
+      },
+      "2": {
+        "int": 2,
+        "conhecimento_bio": 1
+      },
+      "3": {
+        "int": 3,
+        "conhecimento_bio": 2
+      }
+    },
+    "requirements": "Recuperar artefatos em ruínas: 10 / 30 / 100.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Arqueologia e ciência para desvendar segredos antigos."
+  },
+  "mordida_experimental": {
+    "id": "mordida_experimental",
+    "title": "Mordida Experimental",
+    "rank": 4,
+    "maxLevel": 3,
+    "thresholds": [
+      1,
+      3,
+      5
+    ],
+    "bonuses": {
+      "1": {
+        "rc": 2
+      },
+      "2": {
+        "rc": 4,
+        "random_ability_chance_pct": 10
+      },
+      "3": {
+        "rc": 6,
+        "unique_mutation": true
+      }
+    },
+    "requirements": "Participar de experimentos: 1 / 3 / 5 (voluntários/perigosos).",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Risco em troca de mutações e poder."
+  },
+  "falcao_de_aogiri": {
+    "id": "falcao_de_aogiri",
+    "title": "Falcão de Aogiri",
+    "rank": 3,
+    "maxLevel": 3,
+    "thresholds": [
+      5,
+      20,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "comb_corpo": 2
+      },
+      "2": {
+        "comb_corpo": 4,
+        "stealth": 1
+      },
+      "3": {
+        "comb_corpo": 6,
+        "ability": "Emboscada"
+      }
+    },
+    "requirements": "Aogiri Tree: executar emboscadas 5 / 20 / missão chefe.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [
+      "Aogiri Tree"
+    ],
+    "description": "Força e crueldade coordenadas em equipe."
+  },
+  "lenda_do_asfalto": {
+    "id": "lenda_do_asfalto",
+    "title": "Lenda do Asfalto",
+    "rank": 1,
+    "maxLevel": 3,
+    "thresholds": [
+      20,
+      60,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "esquiva": 2
+      },
+      "2": {
+        "esquiva": 4
+      },
+      "3": {
+        "esquiva": 6,
+        "title": "Lenda"
+      }
+    },
+    "requirements": "Vencer corridas/duelos de rua: 20 / 60 / torneio regional.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Velocidade e reputação nas ruas."
+  },
+  "plano_do_suso": {
+    "id": "plano_do_suso",
+    "title": "Plano do Suso",
+    "rank": 3,
+    "maxLevel": 3,
+    "thresholds": [
+      10,
+      30,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "investigacao": 2
+      },
+      "2": {
+        "investigacao": 4,
+        "hack": 2
+      },
+      "3": {
+        "investigacao": 6,
+        "hack": 4
+      }
+    },
+    "requirements": "Plantar dispositivos e operar rede de espionagem: 10 / 30 / campanha maior.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [
+      "CCG",
+      "Organização V"
+    ],
+    "description": "Espionagem de alto nível e recolha de dados."
+  },
+  "sussurro_quinquelist": {
+    "id": "sussurro_quinquelist",
+    "title": "Sussurro Quinquelist",
+    "rank": 2,
+    "maxLevel": 3,
+    "thresholds": [
+      10,
+      30,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "artesao": 1
+      },
+      "2": {
+        "artesao": 2
+      },
+      "3": {
+        "artesao": 3,
+        "craft_bonus_pct": 10
+      }
+    },
+    "requirements": "Reparar/forjar quinques menores: 10 / 30 / peças raras.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Mestre artesão com chance de peças especiais."
+  },
+  "coração_partidario": {
+    "id": "coração_partidario",
+    "title": "Coração Partidário",
+    "rank": 2,
+    "maxLevel": 3,
+    "thresholds": [
+      5,
+      15,
+      30
+    ],
+    "bonuses": {
+      "1": {
+        "car": 1
+      },
+      "2": {
+        "car": 2,
+        "influencia": 1
+      },
+      "3": {
+        "car": 3,
+        "influencia": 2
+      }
+    },
+    "requirements": "Ganhar votos/favores: 5 / 15 / 30.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Política local: carisma que rende aliados e vantagens."
+  },
+  "vortice_ukaku": {
+    "id": "vortice_ukaku",
+    "title": "Vórtice Ukaku",
+    "rank": 3,
+    "maxLevel": 3,
+    "thresholds": [
+      200,
+      500,
+      1000
+    ],
+    "bonuses": {
+      "1": {
+        "dano_dist": 10
+      },
+      "2": {
+        "dano_dist": 20,
+        "des": 2
+      },
+      "3": {
+        "dano_dist": 40,
+        "des": 4
+      }
+    },
+    "requirements": "Ukaku: derrotar inimigos à distância: 200 / 500 / 1000.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Especialização em fogo de cobertura e precisão."
+  },
+  "baluarte_koukaku": {
+    "id": "baluarte_koukaku",
+    "title": "Baluarte Koukaku",
+    "rank": 3,
+    "maxLevel": 3,
+    "thresholds": [
+      50,
+      200,
+      500
+    ],
+    "bonuses": {
+      "1": {
+        "res": 2
+      },
+      "2": {
+        "res": 4,
+        "ally_protect": 1
+      },
+      "3": {
+        "res": 6,
+        "ally_protect": 2
+      }
+    },
+    "requirements": "Defender aliados com sucesso: 50 / 200 / 500 casos.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Tanque humano: protege o grupo com eficiência."
+  },
+  "nevoa_rinkaku": {
+    "id": "nevoa_rinkaku",
+    "title": "Névoa Rinkaku",
+    "rank": 3,
+    "maxLevel": 3,
+    "thresholds": [
+      100,
+      500,
+      2000
+    ],
+    "bonuses": {
+      "1": {
+        "rc": 1
+      },
+      "2": {
+        "rc": 3,
+        "regen": 1
+      },
+      "3": {
+        "rc": 5,
+        "regen": 2
+      }
+    },
+    "requirements": "Curar aliados usando habilidades Rinkaku acumulando cura total: 100 / 500 / 2000 HP.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Fornece RC passiva e regeneração em combate."
+  },
+  "caixa_negra": {
+    "id": "caixa_negra",
+    "title": "Caixa Negra",
+    "rank": 2,
+    "maxLevel": 3,
+    "thresholds": [
+      5,
+      20,
+      100
+    ],
+    "bonuses": {
+      "1": {
+        "hack": 2
+      },
+      "2": {
+        "hack": 4
+      },
+      "3": {
+        "hack": 6,
+        "intel_access": 1
+      }
+    },
+    "requirements": "Extrair arquivos secretos: 5 / 20 / 100.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Arquivos valiosos e vantagem em operações digitais."
+  },
+  "colecionador_de_titulos": {
+    "id": "colecionador_de_titulos",
+    "title": "Colecionador de Títulos",
+    "rank": 1,
+    "maxLevel": 3,
+    "thresholds": [
+      10,
+      30,
+      100
+    ],
+    "bonuses": {
+      "1": {
+        "social_bonus": 1
+      },
+      "2": {
+        "social_bonus": 2
+      },
+      "3": {
+        "social_bonus": 3
+      }
+    },
+    "requirements": "Obter títulos menores em eventos sociais: 10 / 30 / 100.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Reputação social que rende pequenas vantagens."
+  },
+  "flecha_da_justica": {
+    "id": "flecha_da_justica",
+    "title": "Flecha da Justiça",
+    "rank": 3,
+    "maxLevel": 3,
+    "thresholds": [
+      10,
+      50,
+      200
+    ],
+    "bonuses": {
+      "1": {
+        "comb_dist": 2
+      },
+      "2": {
+        "comb_dist": 4,
+        "investigacao": 1
+      },
+      "3": {
+        "comb_dist": 6,
+        "investigacao": 3
+      }
+    },
+    "requirements": "Prender/neutralizar criminosos em missões CCG: 10 / 50 / 200.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [
+      "CCG"
+    ],
+    "description": "Técnica de caça e repressão com precisão investigativa."
+  },
+  "enciclopedia_dos_monstros": {
+    "id": "enciclopedia_dos_monstros",
+    "title": "Enciclopédia dos Monstros",
+    "rank": 2,
+    "maxLevel": 3,
+    "thresholds": [
+      25,
+      75,
+      200
+    ],
+    "bonuses": {
+      "1": {
+        "conhecimento_ghouls": 2
+      },
+      "2": {
+        "conhecimento_ghouls": 4,
+        "per": 1
+      },
+      "3": {
+        "conhecimento_ghouls": 6,
+        "per": 2
+      }
+    },
+    "requirements": "Compilar bestiário: 25 / 75 / 200 entradas.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Compêndio que revela fraquezas e padrões."
+  },
+  "heranca_rubra": {
+    "id": "heranca_rubra",
+    "title": "Herança Rubra",
+    "rank": 5,
+    "maxLevel": 1,
+    "thresholds": [
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "unique_item": "Relíquia Rubra",
+        "choose_attr_bonus": 10
+      }
+    },
+    "requirements": "Participar e vencer a raid final de campanha (time vencedor).",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Prêmio supremo da campanha: item lendário e grande atributo."
+  },
+  "forja_artefato": {
+    "id": "forja_artefato",
+    "title": "Forja de Artefato",
+    "rank": 3,
+    "maxLevel": 3,
+    "thresholds": [
+      10,
+      30,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "artesao": 2
+      },
+      "2": {
+        "artesao": 4
+      },
+      "3": {
+        "artesao": 6,
+        "artifact_chance_pct": 8
+      }
+    },
+    "requirements": "Reunir materiais raros e forjar: 10 / 30 / criar artefato raro.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Criar itens que mudam o jogo."
+  },
+  "caixa_de_suporte": {
+    "id": "caixa_de_suporte",
+    "title": "Caixa de Suporte",
+    "rank": 2,
+    "maxLevel": 3,
+    "thresholds": [
+      5,
+      20,
+      50
+    ],
+    "bonuses": {
+      "1": {
+        "inv_capacity": 1
+      },
+      "2": {
+        "inv_capacity": 2
+      },
+      "3": {
+        "inv_capacity": 3
+      }
+    },
+    "requirements": "Coletar kits de suporte/estoque raros: 5 / 20 / 50.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Melhora capacidade de itens e logística."
+  },
+  "guardiao_das_ruas": {
+    "id": "guardiao_das_ruas",
+    "title": "Guardião das Ruas",
+    "rank": 1,
+    "maxLevel": 3,
+    "thresholds": [
+      10,
+      30,
+      100
+    ],
+    "bonuses": {
+      "1": {
+        "res": 1
+      },
+      "2": {
+        "res": 2
+      },
+      "3": {
+        "res": 3,
+        "title": "Protetor"
+      }
+    },
+    "requirements": "Defender civis em missões urbanas: 10 / 30 / 100.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Protege inocentes e ganha respeito local."
+  },
+  "caos_controlado": {
+    "id": "caos_controlado",
+    "title": "Caos Controlado",
+    "rank": 3,
+    "maxLevel": 3,
+    "thresholds": [
+      3,
+      10,
+      30
+    ],
+    "bonuses": {
+      "1": {
+        "provocar": 2
+      },
+      "2": {
+        "provocar": 4,
+        "manipulation": 1
+      },
+      "3": {
+        "provocar": 6,
+        "manipulation": 2
+      }
+    },
+    "requirements": "Executar operações de distração e manipulação: 3 / 10 / 30.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [
+      "Palhaços (Pierrots)"
+    ],
+    "description": "Especialista em criar cenários de caos favoráveis."
+  },
+  "arqueiro_noturno": {
+    "id": "arqueiro_noturno",
+    "title": "Arqueiro Noturno",
+    "rank": 2,
+    "maxLevel": 3,
+    "thresholds": [
+      50,
+      200,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "dano_dist": 5
+      },
+      "2": {
+        "dano_dist": 10
+      },
+      "3": {
+        "dano_dist": 20,
+        "crit_bonus_pct": 5
+      }
+    },
+    "requirements": "Acertar alvos críticos à noite: 50 / 200 / proeza noturna.",
+    "visibility": "title-only",
+    "raceRestriction": [],
+    "factionRestriction": [],
+    "description": "Especialista em operações noturnas e tiros letais."
+  },
+  "ryusui_gasai-ken": {
+    "id": "ryusui_gasai-ken",
+    "title": "Ryusui gasai-ken",
+    "rank": 2,
+    "maxLevel": 3,
+    "thresholds": [
+      6,
+      12,
+      24
+    ],
+    "bonuses": {
+      "1": {
+        "for": 5,
+        "des": 3,
+        "comb-corp": 3,
+        "per": 3
+      },
+      "2": {
+        "for": 10,
+        "des": 6,
+        "per": 6,
+        "comb-corp": 6,
+        "ability": "Counter: devolva 1/4 do dano de um ataque direto"
+      },
+      "3": {
+        "for": 20,
+        "des": 12,
+        "comb-corp": 12,
+        "comb-dist": 6,
+        "esquiva": 5,
+        "ability": "Counter: devolve 2/4 do dano de um ataque direto",
+        "per": 12,
+        "passive": "A cada 1/4 de vida perdida +2 em per e esquiva até o final do combate"
+      }
+    },
+    "requirements": "Ter sessões de treinamento com kamigari Garou\n\n6/12/24",
+    "visibility": "full",
+    "raceRestriction": [
+      "Ghoul Puro"
+    ],
+    "factionRestriction": [],
+    "description": "Usuário da arte marcial Ryusui gasai-ken uma variação de shun shin geki satsu para qualquer tipo de kagune"
+  },
+  "shun_shin_geki_satsu": {
+    "id": "shun_shin_geki_satsu",
+    "title": "Shun shin geki satsu",
+    "rank": 4,
+    "maxLevel": 6,
+    "thresholds": [
+      6,
+      12,
+      24,
+      36,
+      60,
+      100
+    ],
+    "bonuses": {
+      "1": {
+        "for": 5,
+        "des": 3,
+        "comb-corp": 3,
+        "per": 3
+      },
+      "2": {
+        "for": 10,
+        "des": 6,
+        "comb-corp": 6,
+        "per": 6,
+        "ability": "Counter I — devolve 25% do dano recebido de ataques diretos como dano ao atacante (aplica-se apenas a ataques corpo a corpo)"
+      },
+      "3": {
+        "for": 15,
+        "des": 9,
+        "comb-corp": 9,
+        "comb-dist": 3,
+        "per": 9,
+        "esquiva": 3,
+        "ability": "Counter II — devolve 35% do dano; o contra-ataque provoca incapacitação ao alvo (se aplicável)"
+      },
+      "4": {
+        "for": 20,
+        "des": 12,
+        "comb-corp": 12,
+        "comb-dist": 6,
+        "per": 12,
+        "esquiva": 5,
+        "ability": "Counter III agora devolve 45% do dano.",
+        "passive": "Defesa Adaptável: pode executar uma ação extra de ataque ou mobilidade em combate."
+      },
+      "5": {
+        "for": 30,
+        "des": 18,
+        "comb-corp": 15,
+        "comb-dist": 9,
+        "per": 18,
+        "esquiva": 8,
+        "ability": "Counter IV — devolve 50% do dano; contra ataques pesados há 33% de chance de causar Sangramento (3d4 por turno, dura 3 turnos).",
+        "passive": "A cada 1/4 de vida perdida, ganha +3 de Percepção e +3 em Esquiva até o final do combate (stacka por quartidade)."
+      },
+      "6": {
+        "for": 40,
+        "des": 24,
+        "comb-corp": 20,
+        "comb-dist": 12,
+        "per": 24,
+        "esquiva": 12,
+        "ability": "Shun Shin Geki Satsu — Mastery: desbloqueia a técnica autoral. Uma vez por combate, permite um avanço instantâneo seguido de uma sequência de golpes letais (alto dano único; custo RC alto e usa o turno completo para canalizar se cancelado, perde o RC). Counter V devolve 65% de dano e aplica atordoamento por 1 turno (CD 3 turnos).",
+        "passive": "Limit breaker: após o usuario levar uma quantidade suficiente de dano ele começa a se transformar. \"Um monstro!?\" "
+      }
+    },
+    "requirements": "Treinos acumulativos com Kamigari Garou — sessões necessárias por nível: 6 / 12 / 24 / 36 / 60 / 100. (Somatório de sessões de treinamento registradas com o instrutor ou provas equivalentes.)",
+    "visibility": "title-only",
+    "raceRestriction": [
+      "Ghoul Puro"
+    ],
+    "factionRestriction": [],
+    "description": "A filosofia de Shun Shin Geki Satsu ao combate com kagune: defesa que vira ataque, avanço instantâneo e punhos que convertem energia de bloqueios em golpes letais."
+  },
+  "monarca_de_nanites": {
+    "id": "monarca_de_nanites",
+    "title": "Monarca de Nanite",
+    "rank": 4,
+    "maxLevel": 3,
+    "thresholds": [
+      5,
+      20,
+      1
+    ],
+    "bonuses": {
+      "1": {
+        "des": 4,
+        "per": 2,
+        "rc": 1,
+        "ability": "Corrupção de Nanite — Beta",
+        "max_minions": 4,
+        "minion_template": "Infectado EVO (Comum)",
+        "description": "Nanites sintonizam-se ao RC do hospedeiro. Ao perfurar e implantar sua kagune, o corpo é convertido em um agente obediente para executar tarefas utilitárias (patrulha, atacar, monitorar). Lacaios transmitem feed sensorial básico e executam ordens simples."
+      },
+      "2": {
+        "des": 8,
+        "per": 4,
+        "rc": 3,
+        "ability": "Corrupção de Nanite — Alpha",
+        "max_minions": 8,
+        "minion_template": "Infectado EVO (Tático)",
+        "description": "Nanites exploram o RC do hospedeiro para reforçar kagune e córtex motor. Lacaios Alpha executam táticas coordenadas simples e oferecem funções de suporte (bloquear, abrir brecha, prender alvos)."
+      },
+      "3": {
+        "per": 6,
+        "rc": 6,
+        "des": 12,
+        "ability": "Suserania Nanítica — Sigma",
+        "max_minions": 12,
+        "minion_template": "Infectado EVO (Avançado)",
+        "description": "Controle profundo: lacaios Sigma operam com comportamento de enxame, podem executar manobras complexas e usar kagune/armas improvisadas. Hospedeiros com RC e atributos maiores produzem lacaios mais robustos e versáteis."
+      }
+    },
+    "requirements": "Somente Ghouls. Ser exposto repetidamente a nanites e sobreviver a um evento quase-morte com HP entre 1–30.",
+    "visibility": "title-only",
+    "raceRestriction": [
+      "Ghoul Puro",
+      "Híbrido"
+    ],
+    "factionRestriction": [
+      "Independente"
+    ],
+    "description": "O usuário manipula nanites que convertem corpos vivos em agentes funcionais. Lacaios usam o RC e os atributos do hospedeiro como base de sua força. "
+  }
+}

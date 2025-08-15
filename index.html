@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ficha — TokyoGhoul EVO (v2)</title>
+  <link rel="stylesheet" href="styles.css">
+  <script id="espolios-data" type="application/json">  </script>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header class="card">
+      <div class="profile">
+        <div class="avatar" id="avatar-preview" onclick="document.getElementById('avatar-file').click()">Avatar</div>
+        <div class="name-block">
+          <h1 contenteditable id="display-name">Nome do Personagem</h1>
+          <p contenteditable id="display-nick">Apelido / Codinome</p>
+        </div>
+      </div>
+
+      <div class="status-bar" role="group" aria-label="Status principais">
+        <div class="stat-pill">
+          <span class="label">Vida</span>
+          <span class="value" id="view-vida">0</span>
+          <div class="small">(HP)</div>
+        </div>
+        <div class="stat-pill">
+          <span class="label">Dano Base</span>
+          <span class="value" id="view-danobase">0</span>
+        </div>
+        <div class="stat-pill">
+          <span class="label">Resistência</span>
+          <span class="value" id="view-resistencia">0</span>
+        </div>
+        <div class="stat-pill">
+          <span class="label">Kagune (Base)</span>
+          <span class="value" id="view-kagunebase">0</span>
+        </div>
+        <div class="stat-pill">
+          <span class="label">Kagune (Especial)</span>
+          <span class="value" id="view-kaguneesp">0</span>
+        </div>
+        <div class="stat-pill">
+          <span class="label">RC</span>
+          <span class="value" id="view-rc">0</span>
+        </div>
+      </div>
+
+    </header>
+
+    <!-- main left -->
+    <main class="card">
+
+      <h2>1 — Personagem</h2>
+      <div class="grid-3">
+        <div>
+          <label>Nível</label>
+          <input type="number" id="input-nivel" min="1" max="20" value="1" onchange="updateView()">
+        </div>
+        <div>
+          <label>Nome Completo</label>
+          <input type="text" id="input-nome" value="">
+        </div>
+        <div>
+          <label>Apelido / Codinome</label>
+          <input type="text" id="input-apelido" value="">
+        </div>
+
+        <div>
+          <label>Idade</label>
+          <input type="number" id="input-idade" min="0" value="18">
+        </div>
+        <div>
+          <label>Sexo / Gênero</label>
+          <input type="text" id="input-sexo">
+        </div>
+        <div>
+          <label>Data de Criação da Ficha</label>
+          <input type="date" id="input-data">
+        </div>
+
+        <div>
+          <label>Altura (cm)</label>
+          <input type="number" id="input-altura" min="0">
+        </div>
+        <div>
+          <label>Peso (kg)</label>
+          <input type="number" id="input-peso" min="0">
+        </div>
+        <div>
+          <label>Cor do Cabelo</label>
+          <input type="text" id="input-cabelo">
+        </div>
+
+        <div>
+          <label>Cor dos Olhos</label>
+          <input type="text" id="input-olhos">
+        </div>
+        <div>
+          <label>Raça</label>
+          <select id="input-raca">
+            <option value="">-- Selecionar --</option>
+            <option>Humano</option>
+            <option>Ghoul Puro</option>
+            <option>Meio-Ghoul (Quinx)</option>
+            <option>Híbrido</option>
+            <option>Anjo</option>
+            <option>Demônio</option>
+            <option>Criança Abençoada</option>
+            <option>Washuu</option>
+            <option>Atribulado</option>
+            <option>Membro da V</option>
+            <option>Quinque Humano</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div id="raca-outro-wrap" style="display:none">
+          <label>Especificar Raça</label>
+          <input id="input-raca-outro" type="text">
+        </div>
+
+        <div>
+          <label>Facção / Origem</label>
+          <select id="input-faccao">
+            <option value="">-- Selecionar --</option>
+            <option>CCG</option>
+            <option>Aogiri Tree</option>
+            <option>Palhaços (Pierrots)</option>
+            <option>Jardim (Sunlit Garden)</option>
+            <option>Família Washuu</option>
+            <option>Organização V</option>
+            <option>Independente</option>
+            <option>Sankench</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div id="faccao-outro-wrap" style="display:none">
+          <label>Especificar Facção</label>
+          <input id="input-faccao-outro" type="text">
+        </div>
+
+        <div style="grid-column:1 / -1">
+          <label>Marcas Distintivas</label>
+          <textarea id="input-marcas" rows="2"></textarea>
+        </div>
+
+        <div style="grid-column:1 / 2">
+          <label>Traços Positivos (até 3)</label>
+          <textarea id="input-tr-p" rows="2" placeholder="Separe por vírgula"></textarea>
+        </div>
+        <div style="grid-column:2 / 3">
+          <label>Traços Negativos (até 3)</label>
+          <textarea id="input-tr-n" rows="2" placeholder="Separe por vírgula"></textarea>
+        </div>
+        <div style="grid-column:3 / -1">
+          <label>Maneirismos / Hábitos (Opcional)</label>
+          <textarea id="input-maneirismos" rows="2"></textarea>
+        </div>
+
+        <div style="grid-column:1 / -1">
+          <label>Fobia / Medo Particular (Obrigatório)</label>
+          <textarea id="input-fobia" rows="1"></textarea>
+        </div>
+
+      </div>
+
+      <h2 style="margin-top:12px">2 — Atributos Dinâmicos</h2>
+      <div class="attrs-grid" id="attrs-grid">
+        <!-- rows generated by JS -->
+      </div>
+
+      <h2 style="margin-top:12px">3 — Perícias Dinâmicas</h2>
+      <div id="skills-wrap" class="skills-grid">
+        <!-- rows generated by JS -->
+      </div>
+
+      <h2 style="margin-top:12px">4 — Espólios de Batalha</h2>
+      <div class="espolios-section">
+        <div class="espolio-info">
+          <p style="color:var(--muted);font-size:0.9rem;margin-bottom:12px">
+            Espólios são marcos desbloqueáveis por ações específicas.
+          </p>
+        </div>
+        <div id="espolios-wrap" class="espolios-grid">
+          <!-- espólios gerados por JS -->
+        </div>
+      </div>
+
+      <h2 style="margin-top:12px">6 — Kagune</h2>
+      <div class="two-col">
+        <div>
+          <label>Tipo de Kagune</label>
+          <select id="input-kagune-tipo" onchange="getKaguneBonusesByLevel()">
+            <option value="">-- Selecionar --</option>
+            <option value="Ukaku">Ukaku</option>
+            <option value="Koukaku">Koukaku</option>
+            <option value="Rinkaku">Rinkaku</option>
+            <option value="Bikaku">Bikaku</option>
+          </select>
+        </div>
+        <div>
+          <label>Nome / Código do Kagune</label>
+          <input id="input-kagune-nome" type="text">
+        </div>
+        <div>
+          <label>Nível de Desenvolvimento (0–10)</label>
+          <input id="input-kagune-nivel" type="number" min="0" max="10" value="0" onchange="getKaguneBonusesByLevel()">
+        </div>
+        <div>
+          <label>Cor Predominante</label>
+          <input id="input-kagune-cor" type="text">
+        </div>
+        <div>
+          <label>Textura / Material Aparente</label>
+          <input id="input-kagune-textura" type="text">
+        </div>
+        <div style="grid-column:1 / -1">
+          <label>Mudanças Visuais Nível 0–3</label>
+          <textarea id="k-visual-0-3" rows="2"></textarea>
+        </div>
+        <div style="grid-column:1 / -1">
+          <label>Mudanças Visuais Nível 4–7</label>
+          <textarea id="k-visual-4-7" rows="2"></textarea>
+        </div>
+        <div style="grid-column:1 / -1">
+          <label>Mudanças Visuais Nível 8–10</label>
+          <textarea id="k-visual-8-10" rows="2"></textarea>
+        </div>
+
+        <div>
+          <label>Atributos Herdados / Bônus</label>
+          <input id="k-atributos-read" readonly>
+        </div>
+        <div>
+          <label>Dano Base (Físico)</label>
+          <input id="k-dano-base-read" readonly>
+        </div>
+        <div>
+          <label>Dano Especial (Kagune)</label>
+          <input id="k-dano-esp-read" readonly>
+        </div>
+      </div>
+
+      <h2 style="margin-top:12px">7 — Inventário</h2>
+      <div class="inv-grid">
+        <div class="inv-item">
+          <label>Tipo</label>
+          <select id="item1-tipo">
+            <option>Item</option>
+            <option>Arma</option>
+            <option>Utilitário</option>
+          </select>
+          <label>Nome</label>
+          <input id="item1-n" type="text">
+          <label>Descrição</label>
+          <textarea id="item1-desc" rows="2"></textarea>
+          <label>Efeito</label>
+          <input id="item1-efeito" type="text">
+          <label>Dano Base</label>
+          <input id="item1-db" type="number" value="0">
+          <label>Dano Especial</label>
+          <input id="item1-de" type="number" value="0">
+        </div>
+
+        <div class="inv-item">
+          <label>Tipo</label>
+          <select id="item2-tipo">
+            <option>Item</option>
+            <option>Arma</option>
+            <option>Utilitário</option>
+          </select>
+          <label>Nome</label>
+          <input id="item2-n" type="text">
+          <label>Descrição</label>
+          <textarea id="item2-desc" rows="2"></textarea>
+          <label>Efeito</label>
+          <input id="item2-efeito" type="text">
+          <label>Dano Base</label>
+          <input id="item2-db" type="number" value="0">
+          <label>Dano Especial</label>
+          <input id="item2-de" type="number" value="0">
+        </div>
+
+        <div class="inv-item">
+          <label>Tipo</label>
+          <select id="item3-tipo">
+            <option>Item</option>
+            <option>Arma</option>
+            <option>Utilitário</option>
+          </select>
+          <label>Nome</label>
+          <input id="item3-n" type="text">
+          <label>Descrição</label>
+          <textarea id="item3-desc" rows="2"></textarea>
+          <label>Efeito</label>
+          <input id="item3-efeito" type="text">
+          <label>Dano Base</label>
+          <input id="item3-db" type="number" value="0">
+          <label>Dano Especial</label>
+          <input id="item3-de" type="number" value="0">
+        </div>
+
+        <div class="inv-item">
+          <label>Tipo</label>
+          <select id="item4-tipo">
+            <option>Item</option>
+            <option>Arma</option>
+            <option>Utilitário</option>
+          </select>
+          <label>Nome</label>
+          <input id="item4-n" type="text">
+          <label>Descrição</label>
+          <textarea id="item4-desc" rows="2"></textarea>
+          <label>Efeito</label>
+          <input id="item4-efeito" type="text">
+          <label>Dano Base</label>
+          <input id="item4-db" type="number" value="0">
+          <label>Dano Especial</label>
+          <input id="item4-de" type="number" value="0">
+        </div>
+
+        <div style="grid-column:1 / -1">
+          <label>Descrição Geral do Inventário</label>
+          <textarea id="inv-geral" rows="3"
+            placeholder="Descrição geral sobre a maioria dos itens coletados"></textarea>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- sidebar -->
+    <aside class="sidebar card">
+      <div class="summary">
+        <div class="big">
+          <h3>Resumo Rápido</h3>
+          <p>Vida: <strong id="sum-vida">0</strong></p>
+          <p>Dano Base: <strong id="sum-danobase">0</strong></p>
+          <p>Resistência: <strong id="sum-res">0</strong></p>
+          <p>Kagune: <strong id="sum-kagune">0</strong> / <small id="sum-kagune-esp">0</small></p>
+          <p>RC: <strong id="sum-rc">0</strong></p>
+        </div>
+
+        <div class="btns">
+          <button id="exportBtn">Exportar Ficha (.json)</button>
+          <button class="ghost" id="importBtn">Importar</button>
+          <input id="fileImport" type="file" accept="application/json" style="display:none">
+        </div>
+
+        <!-- <div style="margin-top:10px;color:var(--muted);font-size:0.85rem">Tema: <strong>Dark + Sangue</strong> —
+          responsivo, exportável e pronto para evoluir.</div>
+      </div> -->
+    </aside>
+
+    <footer>Feito pra TokyoGhoul EVO — criação de 4Diovanni para RPG de mesa @2025</footer>
+
+  </div>
+
+  <!-- hidden inputs -->
+  <input id="avatar-file" type="file" accept="image/*" style="display:none">
+  <script src="espolios.js"></script>
+  <script src="script.js" defer></script>
+</body>
+
+</html>
