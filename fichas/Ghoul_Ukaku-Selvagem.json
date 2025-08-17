@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "nivel": 5,
+    "nome": "Ghoul Ukaku - Selvagem",
+    "apelido": "Ukaku",
+    "idade": 0,
+    "sexo": "",
+    "altura": 0,
+    "peso": 0,
+    "cabelo": "",
+    "olhos": "",
+    "raca": "Ghoul Puro",
+    "faccao": "Independente",
+    "data_criacao": "",
+    "marcas": "",
+    "tracos_pos": "",
+    "tracos_neg": "",
+    "maneirismos": "",
+    "fobia": ""
+  },
+  "status": {
+    "vida": 90,
+    "danobase": 18,
+    "resistencia": 12,
+    "kagune_base": 18,
+    "kagune_esp": 49,
+    "rc": 9
+  },
+  "atributos": {
+    "for": { "base": 11, "bonus_raca": 0, "bonus_faccao": 0, "total": 13 },
+    "des": { "base": 17, "bonus_raca": 0, "bonus_faccao": 0, "total": 21 },
+    "res": { "base": 6, "bonus_raca": 0, "bonus_faccao": 0, "total": 8 },
+    "per": { "base": 15, "bonus_raca": 0, "bonus_faccao": 0, "total": 18 },
+    "int": { "base": 6, "bonus_raca": 0, "bonus_faccao": 0, "total": 8 },
+    "car": { "base": 6, "bonus_raca": 0, "bonus_faccao": 0, "total": 9 },
+    "rcpot": { "base": 9, "bonus_raca": 0, "bonus_faccao": 0, "total": 11 }
+  },
+  "skills": [
+    { "name": "Combate Corpo a Corpo", "level": 0, "total": 0 },
+    { "name": "Combate com Quinque", "level": 0, "total": 0 },
+    { "name": "Combate com Faca / Melee Light", "level": 0, "total": 0 },
+    { "name": "Combate à Distância", "level": 0, "total": 3 },
+    { "name": "Esquiva / Agilidade", "level": 0, "total": 3 },
+    { "name": "Stealth / Furtividade", "level": 0, "total": 1 },
+    { "name": "Sobrevivência Urbana", "level": 0, "total": 0 },
+    { "name": "Investigação e Rastreamento", "level": 0, "total": 0 },
+    { "name": "Conhecimento sobre Ghouls", "level": 0, "total": 0 },
+    { "name": "Medicina de Campo", "level": 0, "total": 0 },
+    { "name": "Manipulação Social", "level": 0, "total": 0 },
+    { "name": "Empatia / Leitura Emocional", "level": 0, "total": 0 },
+    { "name": "Negociação (Mercado Negro)", "level": 0, "total": 0 },
+    { "name": "Provocar / Intimidação", "level": 0, "total": 0 },
+    { "name": "Ciência (Biologia / Química)", "level": 0, "total": 0 },
+    { "name": "Habilidades Manuais (Artesão)", "level": 0, "total": 0 },
+    { "name": "Tecnologia / Hackear", "level": 0, "total": 0 },
+    { "name": "Culinária Especial (Antídotos)", "level": 0, "total": 0 },
+    { "name": "Nível de Influência (Facção)", "level": 0, "total": 0 }
+  ],
+  "kagune": {
+    "tipo": "Ukaku",
+    "nome": "Ukaku Selvagem",
+    "nivel": 5,
+    "cor": "azul-pálido",
+    "textura": "cristalina",
+    "visual_0_3": "",
+    "visual_4_7": "",
+    "visual_8_10": "",
+    "atributos_herdados": {
+      "for": 2,
+      "des": 4,
+      "res": 2,
+      "per": 3,
+      "int": 2,
+      "car": 3,
+      "rcpot": 2
+    }
+  },
+  "itens": [
+    { "tipo": "", "nome": "Fragmento de Kagune", "descricao": "Matéria-prima coletada", "efeito": "", "dano_base": 0, "dano_esp": 0 },
+    { "tipo": "", "nome": "Bolsa de RC", "descricao": "Consumível de RC", "efeito": "+1 Pot. RC (uso único)", "dano_base": 0, "dano_esp": 0 },
+    { "tipo": "", "nome": "Resíduo Nanite", "descricao": "Material raro para ofício", "efeito": "", "dano_base": 0, "dano_esp": 0 }
+  ],
+  "inv_geral": "",
+  "espolios": { "activeEspolio": null, "unlockedEspolios": {}, "progress": {} }
+}

@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "nivel": 2,
+    "nome": "Jhonny Vincent",
+    "apelido": "Chefe",
+    "idade": 22,
+    "sexo": "macho",
+    "altura": 1.77,
+    "peso": 77,
+    "cabelo": "Preto e vermelho",
+    "olhos": "Pretos",
+    "raca": "Ghoul Puro",
+    "faccao": "Sankench",
+    "data_criacao": "2025-08-09",
+    "marcas": "tatuagem de gangue ",
+    "tracos_pos": "Leal, bonito, gentil",
+    "tracos_neg": "silly, as vezes mente",
+    "maneirismos": "assovio ",
+    "fobia": "palhaço"
+  },
+  "status": {
+    "vida": 0,
+    "danobase": "15 ",
+    "resistencia": "11",
+    "kagune_base": 17,
+    "kagune_esp": 54.4,
+    "rc": 14
+  },
+  "atributos": {
+    "for": {
+      "base": 5,
+      "bonus_raca": 2,
+      "bonus_faccao": 4,
+      "total": 15
+    },
+    "des": {
+      "base": 4,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 5
+    },
+    "res": {
+      "base": 5,
+      "bonus_raca": 2,
+      "bonus_faccao": 2,
+      "total": 11
+    },
+    "per": {
+      "base": 3,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 4
+    },
+    "int": {
+      "base": 3,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 4
+    },
+    "car": {
+      "base": 2,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 3
+    },
+    "rcpot": {
+      "base": 8,
+      "bonus_raca": 2,
+      "bonus_faccao": 2,
+      "total": 14
+    }
+  },
+  "skills": [
+    {
+      "name": "Combate Corpo a Corpo",
+      "level": 5,
+      "total": 8
+    },
+    {
+      "name": "Combate com Quinque",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Combate com Faca / Melee Light",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Combate à Distância",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Esquiva / Agilidade",
+      "level": 3,
+      "total": 5
+    },
+    {
+      "name": "Stealth / Furtividade",
+      "level": 2,
+      "total": 2
+    },
+    {
+      "name": "Sobrevivência Urbana",
+      "level": 2,
+      "total": 3
+    },
+    {
+      "name": "Investigação e Rastreamento",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Conhecimento sobre Ghouls",
+      "level": 2,
+      "total": 6
+    },
+    {
+      "name": "Medicina de Campo",
+      "level": 0,
+      "total": 1
+    },
+    {
+      "name": "Manipulação Social",
+      "level": 0,
+      "total": 3
+    },
+    {
+      "name": "Empatia / Leitura Emocional",
+      "level": 0,
+      "total": 3
+    },
+    {
+      "name": "Negociação (Mercado Negro)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Provocar / Intimidação",
+      "level": 3,
+      "total": 5
+    },
+    {
+      "name": "Ciência (Biologia / Química)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Habilidades Manuais (Artesão)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Tecnologia / Hackear",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Culinária Especial (Antídotos)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Nível de Influência (Facção)",
+      "level": 2,
+      "total": 2
+    }
+  ],
+  "kagune": {
+    "tipo": "Rinkaku",
+    "nome": "Akai shokushu",
+    "nivel": 2,
+    "cor": "escarlarte ",
+    "textura": "escamas",
+    "visual_0_3": "",
+    "visual_4_7": "",
+    "visual_8_10": "",
+    "atributos_herdados": {
+      "for": 3,
+      "des": 1,
+      "res": 1,
+      "per": 1,
+      "int": 1,
+      "car": 1,
+      "rcpot": 2
+    }
+  },
+  "itens": [
+    {
+      "tipo": "Utilitário",
+      "nome": "radinho (celular)",
+      "descricao": "iphone 21 ",
+      "efeito": "",
+      "dano_base": 0,
+      "dano_esp": 0
+    },
+    {
+      "tipo": "Item",
+      "nome": "mascara",
+      "descricao": "samurai vermelha",
+      "efeito": "",
+      "dano_base": 0,
+      "dano_esp": 0
+    },
+    {
+      "tipo": "Item",
+      "nome": "",
+      "descricao": "",
+      "efeito": "",
+      "dano_base": 0,
+      "dano_esp": 0
+    },
+    {
+      "tipo": "Item",
+      "nome": "",
+      "descricao": "",
+      "efeito": "",
+      "dano_base": 0,
+      "dano_esp": 0
+    }
+  ],
+  "inv_geral": "1 fragmento de kakuhoul evoluido = aumenta permanentemente o nivel de RC em 1\n\n2 gase = Para sangramentos\n",
+  "espolios": {
+    "activeEspolio": null,
+    "unlockedEspolios": {
+      "dont_you_know_im_still_stand": {
+        "level": 1
+      },
+      "shun_shin_geki_satsu": {
+        "level": 1
+      },
+      "monarca_de_nanites": {
+        "level": 3
+      }
+    },
+    "progress": {}
+  }
+}

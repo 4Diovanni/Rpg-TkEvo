@@ -1,0 +1,222 @@
+{
+  "meta": {
+    "nivel": 20,
+    "nome": "Kishou Arima",
+    "apelido": "The White Reaper",
+    "idade": 37,
+    "sexo": "Masculino",
+    "altura": 182,
+    "peso": 78,
+    "cabelo": "Branco",
+    "olhos": "Cinza",
+    "raca": "Criança Abençoada",
+    "faccao": "CCG",
+    "data_criacao": "2025-08-12",
+    "marcas": "Cicatrizes antigas, olhar calculista",
+    "tracos_pos": "Implacável, Preciso, Inescrupuloso em combate",
+    "tracos_neg": "Segue ordens; sem ideologia própria atualmente",
+    "maneirismos": "Postura sempre reta; respiração controlada",
+    "fobia": "Nenhuma conhecida"
+  },
+  "status": {
+    "vida": 0,
+    "danobase": "244 +(120)",
+    "resistencia": "242",
+    "kagune_base": 245,
+    "kagune_esp": 0,
+    "rc": 101
+  },
+  "atributos": {
+    "for": {
+      "base": 200,
+      "bonus_raca": 5,
+      "bonus_faccao": 0,
+      "total": 244
+    },
+    "des": {
+      "base": 190,
+      "bonus_raca": 4,
+      "bonus_faccao": 0,
+      "total": 194
+    },
+    "res": {
+      "base": 220,
+      "bonus_raca": 3,
+      "bonus_faccao": 0,
+      "total": 242
+    },
+    "per": {
+      "base": 250,
+      "bonus_raca": 0,
+      "bonus_faccao": 1,
+      "total": 251
+    },
+    "int": {
+      "base": 230,
+      "bonus_raca": 2,
+      "bonus_faccao": 2,
+      "total": 234
+    },
+    "car": {
+      "base": 180,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 180
+    },
+    "rcpot": {
+      "base": 100,
+      "bonus_raca": 1,
+      "bonus_faccao": 0,
+      "total": 101
+    }
+  },
+  "skills": [
+    {
+      "name": "Combate Corpo a Corpo",
+      "level": 5,
+      "total": 6
+    },
+    {
+      "name": "Combate com Quinque",
+      "level": 5,
+      "total": 7
+    },
+    {
+      "name": "Combate com Faca / Melee Light",
+      "level": 5,
+      "total": 5
+    },
+    {
+      "name": "Combate à Distância",
+      "level": 4,
+      "total": 4
+    },
+    {
+      "name": "Esquiva / Agilidade",
+      "level": 5,
+      "total": 6
+    },
+    {
+      "name": "Stealth / Furtividade",
+      "level": 4,
+      "total": 4
+    },
+    {
+      "name": "Sobrevivência Urbana",
+      "level": 3,
+      "total": 3
+    },
+    {
+      "name": "Investigação e Rastreamento",
+      "level": 4,
+      "total": 7
+    },
+    {
+      "name": "Conhecimento sobre Ghouls",
+      "level": 5,
+      "total": 6
+    },
+    {
+      "name": "Medicina de Campo",
+      "level": 2,
+      "total": 3
+    },
+    {
+      "name": "Manipulação Social",
+      "level": 3,
+      "total": 3
+    },
+    {
+      "name": "Empatia / Leitura Emocional",
+      "level": 2,
+      "total": 2
+    },
+    {
+      "name": "Negociação (Mercado Negro)",
+      "level": 1,
+      "total": 1
+    },
+    {
+      "name": "Provocar / Intimidação",
+      "level": 4,
+      "total": 4
+    },
+    {
+      "name": "Ciência (Biologia / Química)",
+      "level": 2,
+      "total": 2
+    },
+    {
+      "name": "Habilidades Manuais (Artesão)",
+      "level": 1,
+      "total": 1
+    },
+    {
+      "name": "Tecnologia / Hackear",
+      "level": 2,
+      "total": 2
+    },
+    {
+      "name": "Culinária Especial (Antídotos)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Nível de Influência (Facção)",
+      "level": 5,
+      "total": 5
+    }
+  ],
+  "kagune": {
+    "tipo": "",
+    "nome": "",
+    "nivel": 0,
+    "cor": "",
+    "textura": "",
+    "visual_0_3": "",
+    "visual_4_7": "",
+    "visual_8_10": "",
+    "atributos_herdados": {
+      "for": 0,
+      "des": 0,
+      "res": 0,
+      "per": 0,
+      "int": 0,
+      "car": 0,
+      "rcpot": 0
+    }
+  },
+  "itens": [
+    {
+      "tipo": "Arma",
+      "nome": "Quinque Especial — \"White Reaper\"",
+      "descricao": "Quinque de elite refinada; poder letal e precisão cirúrgica.",
+      "efeito": "Aumenta dano físico e perfuração",
+      "dano_base": 120,
+      "dano_esp": 300
+    },
+    {
+      "tipo": "",
+      "nome": "Emblema CCG — Grau Máximo",
+      "descricao": "Autoridade total da CCG; acesso a arquivos restritos",
+      "efeito": "Acesso e influência; bônus investigativo",
+      "dano_base": 0,
+      "dano_esp": 0
+    },
+    {
+      "tipo": "Item",
+      "nome": "Protocolo de Reconstrução",
+      "descricao": "Arquivo com processos usados na recriação do corpo de Arima",
+      "efeito": "Usado em scripts narrativos / trama",
+      "dano_base": 0,
+      "dano_esp": 0
+    }
+  ],
+  "inv_geral": "Arquivo de Missões CCG\nRelíquia Pessoal (registro)\nRegistro de Combates e Instruções Especiais\nQuinque — White Reaper\nProtocolo de Reconstrução (CCG)\nChaves de Cofre CCG - Arima\nArquivo Tático — Arima",
+  "espolios": {
+    "activeEspolio": null,
+    "unlockedEspolios": {
+    },
+    "progress": {}
+  }
+}

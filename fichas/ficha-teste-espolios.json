@@ -1,0 +1,294 @@
+{
+  "meta": {
+    "nivel": 1,
+    "nome": "Nome do Personagem",
+    "apelido": "Apelido / Codinome",
+    "idade": 18,
+    "sexo": "",
+    "altura": 0,
+    "peso": 0,
+    "cabelo": "",
+    "olhos": "",
+    "raca": "",
+    "faccao": "",
+    "data_criacao": "",
+    "marcas": "",
+    "tracos_pos": "",
+    "tracos_neg": "",
+    "maneirismos": "",
+    "fobia": ""
+  },
+  "status": {
+    "vida": 0,
+    "danobase": "0 ",
+    "resistencia": "0",
+    "kagune_base": 1,
+    "kagune_esp": 0,
+    "rc": 0
+  },
+  "atributos": {
+    "for": {
+      "base": 0,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 0
+    },
+    "des": {
+      "base": 0,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 0
+    },
+    "res": {
+      "base": 0,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 0
+    },
+    "per": {
+      "base": 0,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 0
+    },
+    "int": {
+      "base": 0,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 0
+    },
+    "car": {
+      "base": 0,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 0
+    },
+    "rcpot": {
+      "base": 0,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 0
+    }
+  },
+  "skills": [
+    {
+      "name": "Combate Corpo a Corpo",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Combate com Quinque",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Combate com Faca / Melee Light",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Combate à Distância",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Esquiva / Agilidade",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Stealth / Furtividade",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Sobrevivência Urbana",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Investigação e Rastreamento",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Conhecimento sobre Ghouls",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Medicina de Campo",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Manipulação Social",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Empatia / Leitura Emocional",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Negociação (Mercado Negro)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Provocar / Intimidação",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Ciência (Biologia / Química)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Habilidades Manuais (Artesão)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Tecnologia / Hackear",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Culinária Especial (Antídotos)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Nível de Influência (Facção)",
+      "level": 0,
+      "total": 0
+    }
+  ],
+  "kagune": {
+    "tipo": "",
+    "nome": "",
+    "nivel": 0,
+    "cor": "",
+    "textura": "",
+    "visual_0_3": "",
+    "visual_4_7": "",
+    "visual_8_10": "",
+    "atributos_herdados": {
+      "for": 0,
+      "des": 0,
+      "res": 0,
+      "per": 0,
+      "int": 0,
+      "car": 0,
+      "rcpot": 0
+    }
+  },
+  "itens": [
+    {
+      "tipo": "Item",
+      "nome": "",
+      "descricao": "",
+      "efeito": "",
+      "dano_base": 0,
+      "dano_esp": 0
+    },
+    {
+      "tipo": "Item",
+      "nome": "",
+      "descricao": "",
+      "efeito": "",
+      "dano_base": 0,
+      "dano_esp": 0
+    },
+    {
+      "tipo": "Item",
+      "nome": "",
+      "descricao": "",
+      "efeito": "",
+      "dano_base": 0,
+      "dano_esp": 0
+    }
+  ],
+  "inv_geral": "",
+  "espolios": {
+    "activeEspolio": null,
+    "unlockedEspolios": {
+      "arima_white_reaper_quinque": { "level": 1 },
+      "arima_mastery_of_strike": { "level": 1 },
+      "arima_reaper_tactics": { "level": 1 },
+      "arima_core_fragment": { "level": 1 },
+      "arima_reconstruction_protocol": { "level": 1 },
+      "arima_vault_keys": { "level": 1 },
+      "arima_legacy_of_the_reaper": { "level": 1 },
+      "arima_hunter_instinct": { "level": 1 },
+      "arima_forbidden_blood": { "level": 1 },
+      "arima_ultimate_memory": { "level": 1 },
+      "hyde_washuu_insignia": { "level": 1 },
+      "hyde_casefiles": { "level": 1 },
+      "hyde_safehouse_keys": { "level": 1 },
+      "hyde_mentor_counsel": { "level": 1 },
+      "cacador_carmesim": { "level": 1 },
+      "fome_de_oni": { "level": 1 },
+      "cacador_de_lobos": { "level": 1 },
+      "quinx_purger": { "level": 1 },
+      "legado_washuu": { "level": 1 },
+      "operador_v": { "level": 1 },
+      "cacador_de_quinques": { "level": 1 },
+      "palhaco_do_caos": { "level": 1 },
+      "jardineiro_curador": { "level": 1 },
+      "sombra_do_ccg": { "level": 1 },
+      "devora_lendas": { "level": 1 },
+      "forja_de_quinque": { "level": 1 },
+      "lamina_solitária": { "level": 1 },
+      "oni_despertar": { "level": 1 },
+      "guardiao_do_jardim": { "level": 1 },
+      "mercador_sombrio": { "level": 1 },
+      "sangue_de_washuu": { "level": 1 },
+      "ceu_de_ukaku": { "level": 1 },
+      "casco_de_koukaku": { "level": 1 },
+      "corpo_de_rinkaku": { "level": 1 },
+      "equilibrio_bikaku": { "level": 1 },
+      "monarca_de_Nanite": { "level": 1 },
+      "dont_you_know_im_still_stand": { "level": 1 },
+      "archivista_de_ghouls": { "level": 1 },
+      "cacador_de_reputacao": { "level": 1 },
+      "olho_clinico": { "level": 1 },
+      "senhor_das_sombras": { "level": 1 },
+      "alquimista_do_jardim": { "level": 1 },
+      "colecionador_de_quinx": { "level": 1 },
+      "forca_bruta": { "level": 1 },
+      "perseguidor_urbano": { "level": 1 },
+      "mestre_do_mercado": { "level": 1 },
+      "selo_da_v": { "level": 1 },
+      "santo_do_sangue": { "level": 1 },
+      "cacador_de_bunkers": { "level": 1 },
+      "operario_das_sombras": { "level": 1 },
+      "senescal_do_conselho": { "level": 1 },
+      "ecos_do_passado": { "level": 1 },
+      "mordida_experimental": { "level": 1 },
+      "falcao_de_aogiri": { "level": 1 },
+      "lenda_do_asfalto": { "level": 1 },
+      "plano_do_suso": { "level": 1 },
+      "sussurro_quinquelist": { "level": 1 },
+      "coração_partidario": { "level": 1 },
+      "vortice_ukaku": { "level": 1 },
+      "baluarte_koukaku": { "level": 1 },
+      "nevoa_rinkaku": { "level": 1 },
+      "caixa_negra": { "level": 1 },
+      "colecionador_de_titulos": { "level": 1 },
+      "flecha_da_justica": { "level": 1 },
+      "enciclopedia_dos_monstros": { "level": 1 },
+      "heranca_rubra": { "level": 1 },
+      "forja_artefato": { "level": 1 },
+      "caixa_de_suporte": { "level": 1 },
+      "guardiao_das_ruas": { "level": 1 },
+      "caos_controlado": { "level": 1 },
+      "arqueiro_noturno": { "level": 1 },
+      "regeneration": { "level": 1 }
+    },
+    "progress": {}
+  }
+}

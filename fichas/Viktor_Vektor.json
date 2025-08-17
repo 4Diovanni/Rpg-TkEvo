@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "nivel": 2,
+    "nome": "Viktor Vektor",
+    "apelido": "senhor V",
+    "idade": 55,
+    "sexo": "macho",
+    "altura": 1.8,
+    "peso": 71,
+    "cabelo": "branco",
+    "olhos": "castanhos",
+    "raca": "Ghoul Puro",
+    "faccao": "Sankench",
+    "data_criacao": "2025-08-12",
+    "marcas": "tatuagem de gangue ",
+    "tracos_pos": "Leal, Estratégico, estoico",
+    "tracos_neg": "impiedoso, enigmático",
+    "maneirismos": "sempre bem vestido",
+    "fobia": "borboletas"
+  },
+  "status": {
+    "vida": 0,
+    "danobase": "15 ",
+    "resistencia": "12",
+    "kagune_base": 17,
+    "kagune_esp": 47.3,
+    "rc": 9
+  },
+  "atributos": {
+    "for": {
+      "base": 6,
+      "bonus_raca": 2,
+      "bonus_faccao": 4,
+      "total": 15
+    },
+    "des": {
+      "base": 3,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 4
+    },
+    "res": {
+      "base": 4,
+      "bonus_raca": 2,
+      "bonus_faccao": 2,
+      "total": 12
+    },
+    "per": {
+      "base": 7,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 8
+    },
+    "int": {
+      "base": 8,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 9
+    },
+    "car": {
+      "base": 1,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 2
+    },
+    "rcpot": {
+      "base": 4,
+      "bonus_raca": 2,
+      "bonus_faccao": 2,
+      "total": 9
+    }
+  },
+  "skills": [
+    {
+      "name": "Combate Corpo a Corpo",
+      "level": 3,
+      "total": 7
+    },
+    {
+      "name": "Combate com Quinque",
+      "level": 0,
+      "total": 3
+    },
+    {
+      "name": "Combate com Faca / Melee Light",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Combate à Distância",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Esquiva / Agilidade",
+      "level": 1,
+      "total": 3
+    },
+    {
+      "name": "Stealth / Furtividade",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Sobrevivência Urbana",
+      "level": 0,
+      "total": 1
+    },
+    {
+      "name": "Investigação e Rastreamento",
+      "level": 5,
+      "total": 5
+    },
+    {
+      "name": "Conhecimento sobre Ghouls",
+      "level": 2,
+      "total": 3
+    },
+    {
+      "name": "Medicina de Campo",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Manipulação Social",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Empatia / Leitura Emocional",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Negociação (Mercado Negro)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Provocar / Intimidação",
+      "level": 3,
+      "total": 5
+    },
+    {
+      "name": "Ciência (Biologia / Química)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Habilidades Manuais (Artesão)",
+      "level": 0,
+      "total": 3
+    },
+    {
+      "name": "Tecnologia / Hackear",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Culinária Especial (Antídotos)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Nível de Influência (Facção)",
+      "level": 5,
+      "total": 5
+    }
+  ],
+  "kagune": {
+    "tipo": "Koukaku",
+    "nome": "Errata",
+    "nivel": 2,
+    "cor": "Preto",
+    "textura": "metal",
+    "visual_0_3": "manto metálico e irregular, formado por placas assimétricas que se sobrepõem como escamas afiadas. As bordas são serrilhadas e refletem a luz em tons prateados e avermelhados, dando a impressão de lâminas sempre em movimento. Quando se fecha ao redor de seu corpo, forma uma couraça compacta e quase impenetrável; quando se abre, as placas se estendem em garras e lâminas curvadas, capazes de rasgar aço com movimentos rápidos e pesados.",
+    "visual_4_7": "",
+    "visual_8_10": "",
+    "atributos_herdados": {
+      "for": 2,
+      "des": 1,
+      "res": 3,
+      "per": 1,
+      "int": 1,
+      "car": 1,
+      "rcpot": 1
+    }
+  },
+  "itens": [
+    {
+      "tipo": "Item",
+      "nome": "",
+      "descricao": "",
+      "efeito": "",
+      "dano_base": 0,
+      "dano_esp": 0
+    },
+    {
+      "tipo": "Item",
+      "nome": "",
+      "descricao": "",
+      "efeito": "",
+      "dano_base": 0,
+      "dano_esp": 0
+    },
+    {
+      "tipo": "Item",
+      "nome": "",
+      "descricao": "",
+      "efeito": "",
+      "dano_base": 0,
+      "dano_esp": 0
+    }
+  ],
+  "inv_geral": "",
+  "espolios": {
+    "activeEspolio": null,
+    "unlockedEspolios": {},
+    "progress": {}
+  }
+}

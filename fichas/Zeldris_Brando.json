@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "nivel": 3,
+    "nome": "Zeldris Brando",
+    "apelido": "Zé",
+    "idade": 18,
+    "sexo": "Masculino",
+    "altura": 180,
+    "peso": 70,
+    "cabelo": "Roxo Escuro",
+    "olhos": "Roxo",
+    "raca": "Humano",
+    "faccao": "CCG",
+    "data_criacao": "2025-08-09",
+    "marcas": "",
+    "tracos_pos": "Benevolente, Altruísta, Sabido.",
+    "tracos_neg": " Fraco, Dificuldade de conversar, um tanto mentiroso.",
+    "maneirismos": "Inquietação com as mãos ou pernas, desassociarão ",
+    "fobia": "Medo de perder o objetivo "
+  },
+  "status": {
+    "vida": 0,
+    "danobase": "10 ",
+    "resistencia": "10",
+    "kagune_base": 11,
+    "kagune_esp": 0,
+    "rc": 3
+  },
+  "atributos": {
+    "for": {
+      "base": 8,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 10
+    },
+    "des": {
+      "base": 5,
+      "bonus_raca": 1,
+      "bonus_faccao": 0,
+      "total": 6
+    },
+    "res": {
+      "base": 8,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 10
+    },
+    "per": {
+      "base": 4,
+      "bonus_raca": 0,
+      "bonus_faccao": 1,
+      "total": 5
+    },
+    "int": {
+      "base": 4,
+      "bonus_raca": 1,
+      "bonus_faccao": 2,
+      "total": 7
+    },
+    "car": {
+      "base": 3,
+      "bonus_raca": 2,
+      "bonus_faccao": 0,
+      "total": 5
+    },
+    "rcpot": {
+      "base": 3,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 3
+    }
+  },
+  "skills": [
+    {
+      "name": "Combate Corpo a Corpo",
+      "level": 4,
+      "total": 5
+    },
+    {
+      "name": "Combate com Quinque",
+      "level": 3,
+      "total": 5
+    },
+    {
+      "name": "Combate com Faca / Melee Light",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Combate à Distância",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Esquiva / Agilidade",
+      "level": 3,
+      "total": 4
+    },
+    {
+      "name": "Stealth / Furtividade",
+      "level": 4,
+      "total": 4
+    },
+    {
+      "name": "Sobrevivência Urbana",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Investigação e Rastreamento",
+      "level": 1,
+      "total": 4
+    },
+    {
+      "name": "Conhecimento sobre Ghouls",
+      "level": 2,
+      "total": 3
+    },
+    {
+      "name": "Medicina de Campo",
+      "level": 0,
+      "total": 1
+    },
+    {
+      "name": "Manipulação Social",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Empatia / Leitura Emocional",
+      "level": 2,
+      "total": 2
+    },
+    {
+      "name": "Negociação (Mercado Negro)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Provocar / Intimidação",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Ciência (Biologia / Química)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Habilidades Manuais (Artesão)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Tecnologia / Hackear",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Culinária Especial (Antídotos)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Nível de Influência (Facção)",
+      "level": 0,
+      "total": 0
+    }
+  ],
+
+  "kagune": {
+    "tipo": "",
+    "nome": "",
+    "nivel": 0,
+    "cor": "",
+    "textura": "",
+    "visual_0_3": "",
+    "visual_4_7": "",
+    "visual_8_10": "",
+    "atributos_herdados": {
+      "for": 0,
+      "des": 0,
+      "res": 0,
+      "per": 0,
+      "int": 0,
+      "car": 0,
+      "rcpot": 0
+    }
+  },
+  "itens": [
+    {
+      "tipo": "Item",
+      "nome": "Mapa completo 100% atualizado",
+      "descricao": "locais detalhados, passagens e sistema de locomoção",
+      "efeito": "todos os locais vistos são marcados",
+      "dano_base": 0,
+      "dano_esp": 0
+    },
+    {
+      "tipo": "Item",
+      "nome": "QCY Airpods",
+      "descricao": "aumenta status conforme música",
+      "efeito": "+1 atributo conforme musica escolhida",
+      "dano_base": 0,
+      "dano_esp": 0
+    },
+    {
+      "tipo": "Item",
+      "nome": "",
+      "descricao": "",
+      "efeito": "",
+      "dano_base": 0,
+      "dano_esp": 0
+    }
+  ],
+  "inv_geral": "Cartão de Acesso Nº1\nEstilhaço Metálico\nFragmento de Kakuhou \"Evoluído\"\nFragmento de Kagune (Roxo) 2x\nGazes 3x\nKit Médico 2x\nMáscara de Gás Quebrada\nMáscara de Nanite Quebrada\nNanites de Cura ROS",
+  "espolios": {
+    "activeEspolio": null,
+    "unlockedEspolios": {
+    },
+    "progress": {}
+  }
+}

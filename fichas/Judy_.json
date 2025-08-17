@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "nivel": 2,
+    "nome": "Judy ",
+    "apelido": "Kenshi",
+    "idade": 19,
+    "sexo": "female",
+    "altura": 1.55,
+    "peso": 50,
+    "cabelo": "loiro",
+    "olhos": "amarelos",
+    "raca": "Ghoul Puro",
+    "faccao": "Sankench",
+    "data_criacao": "2025-08-10",
+    "marcas": "tatuagem de gangue ",
+    "tracos_pos": "Leal, Corajosa, Determinada",
+    "tracos_neg": "sanguinária, Teimosa, Impulsiva",
+    "maneirismos": "quando mente olha para cima e faz biquinho",
+    "fobia": "aranha"
+  },
+  "status": {
+    "vida": 0,
+    "danobase": "17 ",
+    "resistencia": "11",
+    "kagune_base": 19,
+    "kagune_esp": 16.4,
+    "rc": 13
+  },
+  "atributos": {
+    "for": {
+      "base": 8,
+      "bonus_raca": 2,
+      "bonus_faccao": 4,
+      "total": 17
+    },
+    "des": {
+      "base": 6,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 8
+    },
+    "res": {
+      "base": 4,
+      "bonus_raca": 2,
+      "bonus_faccao": 2,
+      "total": 11
+    },
+    "per": {
+      "base": 3,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 5
+    },
+    "int": {
+      "base": 2,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 4
+    },
+    "car": {
+      "base": 3,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 5
+    },
+    "rcpot": {
+      "base": 7,
+      "bonus_raca": 2,
+      "bonus_faccao": 2,
+      "total": 13
+    }
+  },
+  "skills": [
+    {
+      "name": "Combate Corpo a Corpo",
+      "level": 5,
+      "total": 8
+    },
+    {
+      "name": "Combate com Quinque",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Combate com Faca / Melee Light",
+      "level": 0,
+      "total": 1
+    },
+    {
+      "name": "Combate à Distância",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Esquiva / Agilidade",
+      "level": 5,
+      "total": 10
+    },
+    {
+      "name": "Stealth / Furtividade",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Sobrevivência Urbana",
+      "level": 1,
+      "total": 5
+    },
+    {
+      "name": "Investigação e Rastreamento",
+      "level": 2,
+      "total": 5
+    },
+    {
+      "name": "Conhecimento sobre Ghouls",
+      "level": 1,
+      "total": 2
+    },
+    {
+      "name": "Medicina de Campo",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Manipulação Social",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Empatia / Leitura Emocional",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Negociação (Mercado Negro)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Provocar / Intimidação",
+      "level": 3,
+      "total": 5
+    },
+    {
+      "name": "Ciência (Biologia / Química)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Habilidades Manuais (Artesão)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Tecnologia / Hackear",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Culinária Especial (Antídotos)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Nível de Influência (Facção)",
+      "level": 2,
+      "total": 2
+    }
+  ],
+  "kagune": {
+    "tipo": "Bikaku",
+    "nome": "Byakko",
+    "nivel": 2,
+    "cor": "vermelho escarlate ",
+    "textura": "carne",
+    "visual_0_3": "a kagune de Judy sai das costas em duas caudas completamente distintas\nA primeira, do lado esquerdo, é espessa e musculosa de tom vermelho-carmesim com veias douradas, lembrando a superfície de metal polido. \nA segunda, do lado direito, é mais fina, longa e flexível, com um tom vermelho mais vivo e brilho molhado. Ela se move de forma irregular, chicoteando e descrevendo curvas imprevisíveis. Suas extremidades terminam em lâminas afiadas",
+    "visual_4_7": "",
+    "visual_8_10": "",
+    "atributos_herdados": {
+      "for": 2,
+      "des": 2,
+      "res": 2,
+      "per": 2,
+      "int": 2,
+      "car": 2,
+      "rcpot": 2
+    }
+  },
+  "itens": [
+    {
+      "tipo": "Item",
+      "nome": "",
+      "descricao": "",
+      "efeito": "",
+      "dano_base": 0,
+      "dano_esp": 0
+    },
+    {
+      "tipo": "Item",
+      "nome": "",
+      "descricao": "",
+      "efeito": "",
+      "dano_base": 0,
+      "dano_esp": 0
+    },
+    {
+      "tipo": "Item",
+      "nome": "",
+      "descricao": "",
+      "efeito": "",
+      "dano_base": 0,
+      "dano_esp": 0
+    }
+  ],
+  "inv_geral": "",
+  "espolios": {
+    "activeEspolio": null,
+    "unlockedEspolios": {},
+    "progress": {}
+  }
+}

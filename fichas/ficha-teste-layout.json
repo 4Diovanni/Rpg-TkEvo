@@ -1,0 +1,231 @@
+{
+  "meta": {
+    "nivel": 1,
+    "nome": "Nome do Personagem",
+    "apelido": "Apelido / Codinome",
+    "idade": 18,
+    "sexo": "",
+    "altura": 0,
+    "peso": 0,
+    "cabelo": "",
+    "olhos": "",
+    "raca": "",
+    "faccao": "",
+    "data_criacao": "",
+    "marcas": "",
+    "tracos_pos": "",
+    "tracos_neg": "",
+    "maneirismos": "",
+    "fobia": ""
+  },
+  "status": {
+    "vida": 0,
+    "danobase": "6 ",
+    "resistencia": "7",
+    "kagune_base": 10,
+    "kagune_esp": 12.6,
+    "rc": 7
+  },
+  "atributos": {
+    "for": {
+      "base": 5,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 6
+    },
+    "des": {
+      "base": 5,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 6
+    },
+    "res": {
+      "base": 5,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 7
+    },
+    "per": {
+      "base": 5,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 7
+    },
+    "int": {
+      "base": 5,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 7
+    },
+    "car": {
+      "base": 5,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 8
+    },
+    "rcpot": {
+      "base": 5,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 7
+    }
+  },
+  "skills": [
+    {
+      "name": "Combate Corpo a Corpo",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Combate com Quinque",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Combate com Faca / Melee Light",
+      "level": 0,
+      "total": 1
+    },
+    {
+      "name": "Combate à Distância",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Esquiva / Agilidade",
+      "level": 0,
+      "total": 3
+    },
+    {
+      "name": "Stealth / Furtividade",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Sobrevivência Urbana",
+      "level": 0,
+      "total": 3
+    },
+    {
+      "name": "Investigação e Rastreamento",
+      "level": 0,
+      "total": 3
+    },
+    {
+      "name": "Conhecimento sobre Ghouls",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Medicina de Campo",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Manipulação Social",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Empatia / Leitura Emocional",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Negociação (Mercado Negro)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Provocar / Intimidação",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Ciência (Biologia / Química)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Habilidades Manuais (Artesão)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Tecnologia / Hackear",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Culinária Especial (Antídotos)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Nível de Influência (Facção)",
+      "level": 0,
+      "total": 0
+    }
+  ],
+  "kagune": {
+    "tipo": "Bikaku",
+    "nome": "",
+    "nivel": 0,
+    "cor": "",
+    "textura": "",
+    "visual_0_3": "",
+    "visual_4_7": "",
+    "visual_8_10": "",
+    "atributos_herdados": {
+      "for": 1,
+      "des": 1,
+      "res": 2,
+      "per": 2,
+      "int": 2,
+      "car": 3,
+      "rcpot": 2
+    }
+  },
+  "itens": [
+    {
+      "tipo": "Item",
+      "nome": "",
+      "descricao": "",
+      "efeito": "",
+      "dano_base": 0,
+      "dano_esp": 0
+    },
+    {
+      "tipo": "Item",
+      "nome": "",
+      "descricao": "",
+      "efeito": "",
+      "dano_base": 0,
+      "dano_esp": 0
+    },
+    {
+      "tipo": "Item",
+      "nome": "",
+      "descricao": "",
+      "efeito": "",
+      "dano_base": 0,
+      "dano_esp": 0
+    }
+  ],
+  "inv_geral": "",
+  "espolios": {
+    "activeEspolio": null,
+    "unlockedEspolios": {
+      "dont_you_know_im_still_stand": {
+        "level": 1
+      },
+      "shun_shin_geki_satsu": {
+        "level": 1
+      },
+      "monarca_de_nanites": {
+        "level": 1
+      }
+    },
+    "progress": {}
+  }
+}

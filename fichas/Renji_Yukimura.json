@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "nivel": 2,
+    "nome": "Renji Yukimura",
+    "apelido": "Garasu",
+    "idade": 20,
+    "sexo": "Masculino",
+    "altura": 185,
+    "peso": 80,
+    "cabelo": "preto",
+    "olhos": "castanhos",
+    "raca": "Ghoul Puro",
+    "faccao": "Independente",
+    "data_criacao": "2025-08-09",
+    "marcas": "sardas",
+    "tracos_pos": "calmo, organizado e pontual",
+    "tracos_neg": "impaciente, apático e introvertido",
+    "maneirismos": "bater o dedo em superfícies",
+    "fobia": "Chamar atenção"
+  },
+  "status": {
+    "vida": 0,
+    "danobase": "7 ",
+    "resistencia": "9",
+    "kagune_base": 8,
+    "kagune_esp": 29.7,
+    "rc": 8
+  },
+  "atributos": {
+    "for": {
+      "base": 3,
+      "bonus_raca": 2,
+      "bonus_faccao": 0,
+      "total": 7
+    },
+    "des": {
+      "base": 8,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 11
+    },
+    "res": {
+      "base": 5,
+      "bonus_raca": 2,
+      "bonus_faccao": 0,
+      "total": 9
+    },
+    "per": {
+      "base": 5,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 7
+    },
+    "int": {
+      "base": 5,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 6
+    },
+    "car": {
+      "base": 2,
+      "bonus_raca": 0,
+      "bonus_faccao": 0,
+      "total": 3
+    },
+    "rcpot": {
+      "base": 5,
+      "bonus_raca": 2,
+      "bonus_faccao": 0,
+      "total": 8
+    }
+  },
+  "skills": [
+    {
+      "name": "Combate Corpo a Corpo",
+      "level": 5,
+      "total": 5
+    },
+    {
+      "name": "Combate com Quinque",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Combate com Faca / Melee Light",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Combate à Distância",
+      "level": 5,
+      "total": 8
+    },
+    {
+      "name": "Esquiva / Agilidade",
+      "level": 4,
+      "total": 7
+    },
+    {
+      "name": "Stealth / Furtividade",
+      "level": 3,
+      "total": 4
+    },
+    {
+      "name": "Sobrevivência Urbana",
+      "level": 2,
+      "total": 2
+    },
+    {
+      "name": "Investigação e Rastreamento",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Conhecimento sobre Ghouls",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Medicina de Campo",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Manipulação Social",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Empatia / Leitura Emocional",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Negociação (Mercado Negro)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Provocar / Intimidação",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Ciência (Biologia / Química)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Habilidades Manuais (Artesão)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Tecnologia / Hackear",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Culinária Especial (Antídotos)",
+      "level": 0,
+      "total": 0
+    },
+    {
+      "name": "Nível de Influência (Facção)",
+      "level": 0,
+      "total": 0
+    }
+  ],
+  "kagune": {
+    "tipo": "Ukaku",
+    "nome": "Shirogane",
+    "nivel": 1,
+    "cor": "cinza e preto",
+    "textura": "metálico ",
+    "visual_0_3": "Duas asas cristalinas e orgânicas. Elas são escuras, variando do cinza ao preto, com um padrão de rachaduras vermelhas brilhantes que lembram vidro estilhaçado. Cada asa possui um grande olho de ghoul vermelho intenso no centro, além das asas Ukaku orgânicas e cristalinas, ele possui também duas asas pretas adicionais formadas por nanites. Essas asas têm aparência metálica, angular e segmentada, como lâminas de aço polido, refletindo levemente a luz.",
+    "visual_4_7": "",
+    "visual_8_10": "",
+    "atributos_herdados": {
+      "for": 1,
+      "des": 3,
+      "res": 1,
+      "per": 2,
+      "int": 1,
+      "car": 1,
+      "rcpot": 1
+    }
+  },
+  "itens": [
+    {
+      "tipo": "Item",
+      "nome": "mascara",
+      "descricao": "mascara branca com rachaduras parecida com a do jason",
+      "efeito": "esconde a identidade",
+      "dano_base": 0,
+      "dano_esp": 0
+    },
+    {
+      "tipo": "Item",
+      "nome": "bolsa",
+      "descricao": "uma bolsa de academia preta",
+      "efeito": "carrega coisas",
+      "dano_base": 0,
+      "dano_esp": 0
+    },
+    {
+      "tipo": "Item",
+      "nome": "celular ",
+      "descricao": "MotoG pro, max, G, 1tb, snapdragon, Realme GT 7 6G",
+      "efeito": "faz tudo que um celular faz",
+      "dano_base": 0,
+      "dano_esp": 0
+    }
+  ],
+  "inv_geral": "notebook da empresa",
+  "espolios": {
+    "activeEspolio": null,
+    "unlockedEspolios": {
+      "monarca_de_nanites": {
+        "level": 1
+      },
+      "shun_shin_geki_satsu":{
+        "level": 6
+      }
+    },
+    "progress": {}
+  }
+}

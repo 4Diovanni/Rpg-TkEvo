@@ -1,0 +1,234 @@
+{
+  "meta": {
+    "nivel": 12,
+    "nome": "Washuu Hydeyoshi",
+    "apelido": "Hyde",
+    "idade": 32,
+    "sexo": "Masculino",
+    "altura": 178,
+    "peso": 75,
+    "cabelo": "Preto curto",
+    "olhos": "Castanhos",
+    "raca": "Washuu",
+    "faccao": "Família Washuu",
+    "data_criacao": "2025-08-12",
+    "marcas": "Sinal familiar discreto na mão direita",
+    "tracos_pos": "Protetor, Observador, Calculista",
+    "tracos_neg": "Brincalhão em momentos impróprios, teimoso",
+    "maneirismos": "Sorriso fácil; ajeita o crachá com frequência",
+    "fobia": "Temor de falhar ao proteger civis"
+  },
+  "status": {
+    "vida": 0,
+    "danobase": "74 ",
+    "resistencia": "102",
+    "kagune_base": 75,
+    "kagune_esp": 0,
+    "rc": 31
+  },
+  "atributos": {
+    "for": {
+      "base": 60,
+      "bonus_raca": 1,
+      "bonus_faccao": 2,
+      "total": 74
+    },
+    "des": {
+      "base": 70,
+      "bonus_raca": 0,
+      "bonus_faccao": 1,
+      "total": 71
+    },
+    "res": {
+      "base": 90,
+      "bonus_raca": 0,
+      "bonus_faccao": 1,
+      "total": 102
+    },
+    "per": {
+      "base": 120,
+      "bonus_raca": 2,
+      "bonus_faccao": 3,
+      "total": 125
+    },
+    "int": {
+      "base": 130,
+      "bonus_raca": 3,
+      "bonus_faccao": 3,
+      "total": 136
+    },
+    "car": {
+      "base": 110,
+      "bonus_raca": 2,
+      "bonus_faccao": 2,
+      "total": 114
+    },
+    "rcpot": {
+      "base": 30,
+      "bonus_raca": 0,
+      "bonus_faccao": 1,
+      "total": 31
+    }
+  },
+  "skills": [
+    {
+      "name": "Combate Corpo a Corpo",
+      "level": 3,
+      "total": 3
+    },
+    {
+      "name": "Combate com Quinque",
+      "level": 2,
+      "total": 2
+    },
+    {
+      "name": "Combate com Faca / Melee Light",
+      "level": 2,
+      "total": 2
+    },
+    {
+      "name": "Combate à Distância",
+      "level": 2,
+      "total": 2
+    },
+    {
+      "name": "Esquiva / Agilidade",
+      "level": 3,
+      "total": 3
+    },
+    {
+      "name": "Stealth / Furtividade",
+      "level": 3,
+      "total": 3
+    },
+    {
+      "name": "Sobrevivência Urbana",
+      "level": 2,
+      "total": 2
+    },
+    {
+      "name": "Investigação e Rastreamento",
+      "level": 5,
+      "total": 9
+    },
+    {
+      "name": "Conhecimento sobre Ghouls",
+      "level": 4,
+      "total": 5
+    },
+    {
+      "name": "Medicina de Campo",
+      "level": 2,
+      "total": 2
+    },
+    {
+      "name": "Manipulação Social",
+      "level": 3,
+      "total": 5
+    },
+    {
+      "name": "Empatia / Leitura Emocional",
+      "level": 4,
+      "total": 4
+    },
+    {
+      "name": "Negociação (Mercado Negro)",
+      "level": 2,
+      "total": 3
+    },
+    {
+      "name": "Provocar / Intimidação",
+      "level": 1,
+      "total": 1
+    },
+    {
+      "name": "Ciência (Biologia / Química)",
+      "level": 2,
+      "total": 2
+    },
+    {
+      "name": "Habilidades Manuais (Artesão)",
+      "level": 2,
+      "total": 2
+    },
+    {
+      "name": "Tecnologia / Hackear",
+      "level": 4,
+      "total": 5
+    },
+    {
+      "name": "Culinária Especial (Antídotos)",
+      "level": 1,
+      "total": 1
+    },
+    {
+      "name": "Nível de Influência (Facção)",
+      "level": 4,
+      "total": 7
+    }
+  ],
+  "kagune": {
+    "tipo": "",
+    "nome": "",
+    "nivel": 0,
+    "cor": "",
+    "textura": "",
+    "visual_0_3": "",
+    "visual_4_7": "",
+    "visual_8_10": "",
+    "atributos_herdados": {
+      "for": 0,
+      "des": 0,
+      "res": 0,
+      "per": 0,
+      "int": 0,
+      "car": 0,
+      "rcpot": 0
+    }
+  },
+  "itens": [
+    {
+      "tipo": "Item",
+      "nome": "Relíquia Washuu (Insígnia)",
+      "descricao": "Marca de status da família; acesso a privilégios",
+      "efeito": "Aumenta influência e presença",
+      "dano_base": 0,
+      "dano_esp": 0
+    },
+    {
+      "tipo": "Item",
+      "nome": "Dispositivo de Comunicação Segura",
+      "descricao": "Canal criptografado para operações",
+      "efeito": "Permite chamadas seguras e transmissão de dados",
+      "dano_base": 0,
+      "dano_esp": 0
+    },
+    {
+      "tipo": "Item",
+      "nome": "Kit de Contenção / Tranquilizante",
+      "descricao": "Utilitário para conter alvos não-letais",
+      "efeito": "Pode reduzir dano do alvo / imobilizar",
+      "dano_base": 0,
+      "dano_esp": 0
+    }
+  ],
+  "inv_geral": "Registro de Segurança (criptografado)\nMapa de patrulhas\nChaves de acesso Família Washuu\nInsígnia Washuu — Hydeyoshi\nChaves — Abrigo Washuu",
+  "espolios": {
+    "activeEspolio": "hyde_casefiles",
+    "unlockedEspolios": {
+      "hyde_washuu_insignia": {
+        "level": 1
+      },
+      "hyde_casefiles": {
+        "level": 1
+      },
+      "hyde_safehouse_keys": {
+        "level": 1
+      },
+      "hyde_mentor_counsel": {
+        "level": 1
+      }
+    },
+    "progress": {}
+  }
+}

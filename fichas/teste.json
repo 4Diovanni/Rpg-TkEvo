@@ -1,0 +1,68 @@
+{
+  "ryusui_gasai_ken": {
+    "id": "ryusui_gasai_ken",
+    "title": "Ryusui Gasai-ken",
+    "rank": 4,
+    "maxLevel": 6,
+    "thresholds": [6, 12, 24, 36, 60, 100],
+    "bonuses": {
+      "1": {
+        "for": 5,
+        "des": 3,
+        "comb-corp": 3,
+        "per": 3
+      },
+      "2": {
+        "for": 10,
+        "des": 6,
+        "comb-corp": 6,
+        "per": 6,
+        "ability": "Counter I — devolve 25% do dano recebido de ataques diretos como dano ao atacante (aplica-se apenas a ataques corpo a corpo)"
+      },
+      "3": {
+        "for": 15,
+        "des": 9,
+        "comb-corp": 9,
+        "comb-dist": 3,
+        "per": 9,
+        "esquiva": 3,
+        "ability": "Counter II — devolve 35% do dano; o contra-ataque provoca -1 deslocamento ao alvo (se aplicável)"
+      },
+      "4": {
+        "for": 20,
+        "des": 12,
+        "comb-corp": 12,
+        "comb-dist": 6,
+        "per": 12,
+        "esquiva": 5,
+        "ability": "Momentum Strike — após um Counter bem-sucedido, o próximo ataque corpo a corpo causa +50% de dano (dura 1 ataque). Counter agora devolve 45% do dano.",
+        "passive": "Defesa Adaptável: pode reduzir precisão inimiga em -1 enquanto em modo 'compacto' (mobilidade) ou reduzir dano recebido em -2 enquanto em modo 'expandido' (resistência)."
+      },
+      "5": {
+        "for": 30,
+        "des": 18,
+        "comb-corp": 15,
+        "comb-dist": 9,
+        "per": 18,
+        "esquiva": 8,
+        "ability": "Counter III — devolve 50% do dano; contra ataques pesados há 30% de chance de causar Sangramento (2d4 por turno, dura 3 turnos).",
+        "passive": "A cada 1/4 de vida perdida, ganha +3 de Percepção e +3 em Esquiva até o final do combate (stacka por quartis)."
+      },
+      "6": {
+        "for": 40,
+        "des": 24,
+        "comb-corp": 20,
+        "comb-dist": 12,
+        "per": 24,
+        "esquiva": 12,
+        "ability": "Shun Shin Geki Satsu — Mastery: desbloqueia a técnica autoral. Uma vez por combate, permite um avanço instantâneo seguido de uma sequência de golpes letais (alto dano único; custo RC alto e usa o turno completo para canalizar — se cancelado, perde o RC). Counter final devolve 65% de dano e aplica atordoamento por 1 turno (CD 3 turnos).",
+        "passive": "Cobertura Total: enquanto expandido completamente, recebe -3 de dano crítico (redução de impacto em ataques direcionados a pontos vitais)."
+      }
+    },
+    "requirements": "Treinos acumulativos com Kamigari Garou — sessões necessárias por nível: 6 / 12 / 24 / 36 / 60 / 100. (Somatório de sessões de treinamento registradas com o instrutor ou provas equivalentes.)",
+    "visibility": "title-only",
+    "raceRestriction": ["Ghoul Puro"],
+    "factionRestriction": [],
+    "description": "Variação marcial que aplica a filosofia Shun Shin Geki Satsu ao combate com kagune: defesa que vira ataque, avanço instantâneo e punhos que convertem energia de bloqueios em golpes letais."
+  }
+}
